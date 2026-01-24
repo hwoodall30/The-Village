@@ -1,0 +1,20 @@
+[
+	{
+		"name": "Students",
+		"value": "100+",
+		"icon": "lucide:users",
+		"background": "#4c89d9"
+	},
+	{
+		"name": "Programs",
+		"value": "10+",
+		"icon": "lucide:book-open",
+		"background": "#d99e4c"
+	},
+	{
+		"name": "Success Rate",
+		"value": "99%",
+		"icon": "lucide:ribbon",
+		"background": "#4cd995"
+	}
+]
