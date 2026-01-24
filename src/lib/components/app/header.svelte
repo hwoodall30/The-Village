@@ -49,7 +49,7 @@
 <header
 	class="sticky top-0 z-10 flex items-center justify-between border-b bg-background/50 px-5 py-3 backdrop-blur-md"
 >
-	<h1 class="flex items-center gap-2">
+	<a href={resolve('/')} class="flex items-center gap-2">
 		<div
 			class="grid h-8 w-8 place-items-center rounded-md border border-blue-600 bg-blue-600 font-semibold"
 		>
@@ -61,7 +61,7 @@
 		</div>
 
 		The Village
-	</h1>
+	</a>
 
 	<nav class="hidden lg:grid">
 		<div class="relative grid grid-cols-7 divide-x rounded-md border bg-sidebar p-0.5">
