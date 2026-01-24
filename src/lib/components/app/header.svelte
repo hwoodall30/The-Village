@@ -50,8 +50,14 @@
 	class="sticky top-0 z-10 flex items-center justify-between border-b bg-background/50 px-5 py-3 backdrop-blur-md"
 >
 	<h1 class="flex items-center gap-2">
-		<div class="grid h-8 w-8 place-items-center rounded-md bg-blue-500 font-semibold text-white">
-			TV
+		<div
+			class="grid h-8 w-8 place-items-center rounded-md border border-blue-600 bg-blue-600 font-semibold"
+		>
+			<img
+				src="./icons/the-village-icon.svg"
+				alt="The Village Icon"
+				class="h-5 w-5 brightness-0 invert"
+			/>
 		</div>
 
 		The Village
