@@ -31,10 +31,10 @@
 					/>
 
 					<Button
-						href="/blogs"
+						href="/resources"
 						variant="outline"
 						class="dark:hover-text-blue-500 border-blue-600 text-sm text-blue-500 hover:text-blue-700 dark:border-blue-500 dark:text-blue-500"
-						>See Blog Posts <ArrowRight /></Button
+						>See Resources <ArrowRight /></Button
 					>
 				</div>
 			</div>
