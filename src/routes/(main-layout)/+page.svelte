@@ -40,7 +40,7 @@
 			</div>
 			<div class="grid place-items-center">
 				<img
-					class="h-full w-full rounded-md bg-neutral-900 p-5 ring ring-neutral-700 invert dark:ring-neutral-700 dark:invert-0"
+					class="h-full w-full rounded-md bg-black p-5 ring ring-neutral-700 invert dark:bg-neutral-950 dark:ring-neutral-700 dark:invert-0"
 					src="./icons/the-village-logo.svg"
 					alt="placeholder"
 				/>
