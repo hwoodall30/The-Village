@@ -11,11 +11,28 @@
 		<div class="mb-5 text-center text-lg font-bold sm:text-3xl">Stay Connected</div>
 
 		<div class="my-8 grid grid-cols-3 justify-items-center gap-x-12 gap-y-8 px-5">
-			<Icon icon="lucide:mail" class="h-5 w-5 sm:h-8 sm:w-8" />
+			<a
+				href="mailto:contact@example.com"
+				class="rounded-md border border-orange-500/50 bg-linear-to-br from-orange-600/20 to-yellow-600/20 p-2"
+			>
+				<Icon icon="lucide:mail" class="h-3 w-3 sm:h-5 sm:w-5" />
+			</a>
 
-			<Icon icon="lucide:facebook" class="h-5 w-5 sm:h-8 sm:w-8" />
+			<a
+				target="_blank"
+				href="https://www.facebook.com/people/The-Village-Collaborative/61585969575739/"
+				class="rounded-md border border-blue-500/50 bg-linear-to-br from-cyan-600/20 to-blue-600/20 p-2"
+			>
+				<Icon icon="lucide:facebook" class="h-3 w-3 sm:h-5 sm:w-5" />
+			</a>
 
-			<Icon icon="lucide:map-pin" class="h-5 w-5 sm:h-8 sm:w-8" />
+			<a
+				target="_blank"
+				href="https://maps.app.goo.gl/waCCPocKkGA2ckMp8"
+				class="rounded-md border border-green-500/50 bg-linear-to-br from-green-600/20 to-emerald-600/20 p-2"
+			>
+				<Icon icon="lucide:map-pin" class="h-3 w-3 sm:h-5 sm:w-5" />
+			</a>
 		</div>
 
 		<InterestForm
