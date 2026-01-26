@@ -13,37 +13,36 @@
 
 <main class="grid h-full grid-rows-[auto_auto_1fr]">
 	<PageHeaderWrapper>
-		<PageHeader class="grid grid-rows-[auto_1fr] gap-10 lg:grid-cols-2 lg:grid-rows-1">
-			<div>
-				<PageHeaderTitle>
-					Empowering Futures Through <span
-						class="text-blue-500 [view-transition-name:page-header-title]">Acedemic Excellence</span
-					></PageHeaderTitle
-				>
-				<PageHeaderDescription>
-					Discover a vibrant community where learning thrives. Join thousands of students who have
-					transformed their futures through our innovative programs.</PageHeaderDescription
-				>
-				<div class="mt-8 flex flex-col gap-2 lg:flex-row">
-					<InterestForm
-						triggerContent="Join Our Community - Fill out the Interest Form!"
-						triggerClass="bg-blue-500 text-sm text-white hover:bg-blue-700"
-					/>
-
-					<Button
-						href="/resources"
-						variant="outline"
-						class="dark:hover-text-blue-500 border-blue-600 text-sm text-blue-500 hover:text-blue-700 dark:border-blue-500 dark:text-blue-500"
-						>See Resources <ArrowRight /></Button
-					>
-				</div>
-			</div>
+		<PageHeader class="grid grid-rows-[auto_1fr] gap-10  lg:grid-rows-1">
 			<div class="grid place-items-center">
 				<img
-					class="h-full w-full rounded-md bg-black p-5 ring ring-neutral-700 invert dark:bg-neutral-950 dark:ring-neutral-700 dark:invert-0"
+					class="mb-10 max-w-120 rounded-md p-5 invert dark:invert-0"
 					src="./icons/the-village-logo.svg"
 					alt="placeholder"
 				/>
+			</div>
+			<PageHeaderTitle class="text-center">
+				Welcome to <span class="text-blue-500 [view-transition-name:page-header-title]"
+					>The Village</span
+				> Homeschool Collaborative</PageHeaderTitle
+			>
+			<PageHeaderDescription class="text-center">
+				Our vision is to create a Christ-centered educational community where families are empowered
+				and learning blends the best of homeschool and traditional school with flexibility and
+				collaboration.</PageHeaderDescription
+			>
+			<div class="mt-8 grid w-full grid-cols-1 gap-2 lg:grid-cols-2">
+				<InterestForm
+					triggerContent="Interest Form"
+					triggerClass="bg-blue-500 text-sm text-white hover:bg-blue-700"
+				/>
+
+				<Button
+					href="/resources"
+					variant="outline"
+					class="dark:hover-text-blue-500 border-blue-600 text-sm text-blue-500 hover:text-blue-700 dark:border-blue-500 dark:text-blue-500"
+					>See Resources <ArrowRight /></Button
+				>
 			</div>
 		</PageHeader>
 	</PageHeaderWrapper>
@@ -52,10 +51,12 @@
 		<div class="mx-auto grid max-w-7xl">
 			<h2 class="text-center text-4xl font-semibold">Our Mission</h2>
 			<div class="text-center text-xl leading-relaxed text-muted-foreground">
-				We are committed to empowering futures through acedemic excellence.
+				We equip families to homeschool with confidence by providing tailored learning, enrichment
+				opportunities, and a strong community - so children thrive and parents have margin to
+				succeed.
 			</div>
 
-			<ul class="mt-8 grid grid-cols-3 justify-items-center">
+			<!-- <ul class="mt-8 grid grid-cols-3 justify-items-center">
 				{#each stats as stat (stat.name)}
 					<li class="flex flex-col items-center">
 						<div
@@ -68,7 +69,7 @@
 						<p class="text-muted-foreground">{stat.name}</p>
 					</li>
 				{/each}
-			</ul>
+			</ul> -->
 		</div>
 	</div>
 

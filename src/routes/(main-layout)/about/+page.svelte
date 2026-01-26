@@ -1,28 +1,32 @@
 <script module>
 	const coreValues = [
 		{
-			name: 'Faith in Jesus',
-			description:
-				'We center everything we do on the life and teachings of Jesus Christ, encouraging students to grow in their relationship with Him and live out their faith with integrity.',
+			name: 'Christ First',
+			description: 'Jesus is at the center of everything we do.',
 			icon: 'lucide:fish-symbol'
 		},
 		{
-			name: 'Family',
+			name: 'Family-led',
 			description:
-				'We value the strength and support that comes from strong family relationships, partnering with parents to nurture students in love, respect, and shared purpose.',
+				'Our families are empowered, supported, and remain at the heart of the educational journey.',
 			icon: 'lucide:heart'
 		},
 		{
-			name: 'Continuous Learning',
+			name: 'Accountability',
 			description:
-				'We cultivate a lifelong love of learning, inspiring curiosity, critical thinking, and personal growth beyond the classroom.',
-			icon: 'lucide:book-open'
+				'Families, students, and staff grow together in a supportive environment that encourages responsibility, growth, and mutual accountability.',
+			icon: 'lucide:heart-handshake'
 		},
 		{
-			name: 'Community',
+			name: 'Empowred Growth',
+			description: 'Our structure provides family with freedom, margin, and confidence to thrive.',
+			icon: 'lucide:rocket'
+		},
+		{
+			name: 'Educational Excellence',
 			description:
-				'We foster a spirit of unity and service, building a caring community where every member feels valued, included, and empowered to make a positive difference.',
-			icon: 'lucide:heart-handshake'
+				'We provide high-quality, well-rounded learning that blends the best of homeschool and traditional education, combining high academic standards with personalized learning.',
+			icon: 'lucide:book-open'
 		}
 	];
 </script>
@@ -38,6 +42,7 @@
 	import Footer from '$lib/components/app/footer.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { ArrowRight } from '@lucide/svelte';
+	import { cn } from '$lib/utils';
 </script>
 
 <main>
@@ -70,7 +75,11 @@
 
 			<ul class="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2">
 				{#each coreValues as coreValue (coreValue.name)}
-					<Card class="row-span-3 grid h-full grid-rows-subgrid p-6">
+					<Card
+						class={cn('row-span-3 grid h-full grid-rows-subgrid p-6', {
+							'lg:col-span-2': coreValue.name === 'Educational Excellence'
+						})}
+					>
 						<CardHeader class="contents">
 							<div
 								class="grid h-14 w-14 place-items-center justify-self-center rounded-full border border-blue-600 bg-blue-600/20"
@@ -100,7 +109,7 @@
 							<img
 								src={s.image}
 								alt={s.name}
-								class="h-[200px] w-[200px] justify-self-center rounded-full border object-cover object-top"
+								class="h-50 w-50 justify-self-center rounded-full border object-cover object-top"
 							/>
 							<div class="flex flex-col items-center gap-2">
 								<CardTitle class="text-center">{s.name}</CardTitle>
@@ -116,9 +125,9 @@
 				{/each}
 			</div>
 
-			<Button href="/all-staff" variant="outline" class="my-5 w-full"
+			<!-- <Button href="/all-staff" variant="outline" class="my-5 w-full"
 				>See All Staff <ArrowRight /></Button
-			>
+			> -->
 		</div>
 	</div>
 

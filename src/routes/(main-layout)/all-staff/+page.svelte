@@ -14,12 +14,7 @@
 			<PageHeaderTitle class="text-center">
 				All <span class="text-blue-500 [view-transition-name:page-header-title]">Staff</span>
 			</PageHeaderTitle>
-			<PageHeaderDescription class="text-center">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
-				tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices
-				diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci
-				nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-			</PageHeaderDescription>
+			<PageHeaderDescription class="text-center">Meet our talented staff.</PageHeaderDescription>
 		</PageHeader>
 	</PageHeaderWrapper>
 
