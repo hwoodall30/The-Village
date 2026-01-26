@@ -20,11 +20,11 @@ Work is intentionally divided between:
 
 For most families, at-home work can be completed in short, focused blocks of time and is designed to feel manageable—not overwhelming. Younger students will require more parent involvement, while older students will gradually build independence.
 
-This schedule is an example, not a rigid checklist. Families are encouraged to:
+This syllabus is an example, not a rigid checklist. Families are encouraged to:
 
 - Adjust pacing as needed
 - Spend extra time where a child needs support
-- Move more quickly through material that comes easily
+- Move efficiently through daily tasks
 
 Our goal is to support parents, not replace them, and to create a learning environment that values mastery, consistency, and joy in learning over busyness. You do not need to recreate a traditional school-at-home experience—this collaborative is designed to walk alongside you as you grow in confidence as a homeschooling parent.
 
