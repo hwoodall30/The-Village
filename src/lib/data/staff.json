@@ -1,23 +1,16 @@
 [
 	{
-		"name": "Katie Hughes",
-		"position": "Director",
-		"image": "./staff/katie_hughes.webp",
-		"description": "Katie currently works as an Area Reresentative for Smokey Mountain FCA. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
-		"role": "Leadership"
-	},
-	{
-		"name": "Alicia Woodall",
-		"position": "Assistant to the Director",
-		"image": "./staff/alicia_woodall.jpeg",
-		"description": "Alicia graduated from Maryville College with a degree in Graphic Design.",
-		"role": "Leadership"
-	},
-	{
 		"name": "Jane Doe",
-		"position": "1st Grade Teacher",
-		"image": "./staff/jane_doe.jpeg",
-		"description": "Jane is a 1st grade teacher at Smokey Mountain Elementary School. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
-		"role": "Teacher"
-	}
+		"position": "Director",
+		"image": "",
+		"description": "We are excited to fill the role of Director very soon.",
+		"role": "Leadership"
+	},
+	{
+		"name": "John Doe",
+		"position": "Administrator",
+		"image": "",
+		"description": "We are excitced to fill the role of Administrator very soon.",
+		"role": "Leadership"
+	}	
 ]
