@@ -12,7 +12,7 @@
 			icon: 'lucide:heart'
 		},
 		{
-			name: 'Accountability',
+			name: 'Community & Accountability',
 			description:
 				'Families, students, and staff grow together in a supportive environment that encourages responsibility, growth, and mutual accountability.',
 			icon: 'lucide:heart-handshake'
