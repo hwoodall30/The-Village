@@ -57,6 +57,7 @@ In addition, one day per week students will rotate through:
 - Art
 - Music
 - Gym
+- Library
 
 ## How does curriculum work?
 
@@ -90,3 +91,7 @@ Examples include:
 - Monthly chapel
 - Christmas program
 - Thanksgiving feast
+- Optional field trips
+- Fall break
+- Christmas break
+- Spring break
