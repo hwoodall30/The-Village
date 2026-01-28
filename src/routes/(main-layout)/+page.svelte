@@ -6,6 +6,7 @@
 	import PageHeaderWrapper from '$lib/components/app/page-header/page-header-wrapper.svelte';
 	import PageHeader from '$lib/components/app/page-header/page-header.svelte';
 	import { Button } from '$lib/components/ui/button';
+	import Icon from '@iconify/svelte';
 	import { ArrowRight } from '@lucide/svelte';
 </script>
 
@@ -30,10 +31,13 @@
 				collaboration.</PageHeaderDescription
 			>
 			<div class="mt-8 grid w-full grid-cols-1 gap-2 lg:grid-cols-2">
-				<InterestForm
-					triggerContent="Interest Form"
-					triggerClass="bg-blue-500 text-sm text-white hover:bg-blue-700"
-				/>
+				<Button
+					href="https://docs.google.com/forms/d/e/1FAIpQLSdpbLI-Z8OMF3cFxCiqJNe3IlerqqAj885tbXNsnDW4VAHTYw/viewform"
+					target="_blank"
+					rel="noreferrer"
+					class="bg-blue-500 text-sm text-white hover:bg-blue-700"
+					>Interest Form <Icon icon="lucide:form" />
+				</Button>
 
 				<Button
 					href="/resources"
