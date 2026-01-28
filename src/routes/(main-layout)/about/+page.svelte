@@ -40,8 +40,6 @@
 	import Icon from '@iconify/svelte';
 	import staff from '$lib/data/staff.json';
 	import Footer from '$lib/components/app/footer.svelte';
-	import { Button } from '$lib/components/ui/button';
-	import { ArrowRight } from '@lucide/svelte';
 	import { cn } from '$lib/utils';
 </script>
 
@@ -53,14 +51,15 @@
 				>
 			</PageHeaderTitle>
 			<PageHeaderDescription class="text-center">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
-				tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices
-				diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci
-				nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis
-				semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque
-				congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.
-				Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue
-				blandit sodal
+				We are a Christ-centered educational community built to partner with families in a shared
+				approach to learning. Our model blends the flexibility of homeschooling with the support,
+				collaboration, and enrichment of a traditional school setting without taking education out
+				of the hands of parents. Families remain actively involved, students are known, and learning
+				happens in community.<br /> <br /> Christ shapes our culture, our relationships, and the way we
+				walk alongside one another. We value responsibility, growth, and collaboration, and we believe
+				education is most effective when families are supported and connected. We exist to provide a sustainable,
+				supportive environment where families can homeschool with confidence and children can grow in
+				every area of life.
 			</PageHeaderDescription>
 		</PageHeader>
 	</PageHeaderWrapper>

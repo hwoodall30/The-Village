@@ -11,7 +11,7 @@
 </script>
 
 <img
-	class={cn('h-[400px] w-full rounded-md object-cover shadow', className)}
+	class={cn('h-100 w-full rounded-md object-cover shadow', className)}
 	bind:this={ref}
 	{...restProps}
 />

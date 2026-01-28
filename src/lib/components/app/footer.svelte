@@ -12,7 +12,7 @@
 
 		<div class="my-8 grid grid-cols-3 justify-items-center gap-x-12 gap-y-8 px-5">
 			<a
-				href="mailto:contact@example.com"
+				href="mailto:villagecommunitycollab@gmail.com"
 				class="rounded-md border border-orange-500/50 bg-linear-to-br from-orange-600/20 to-yellow-600/20 p-2"
 			>
 				<Icon icon="lucide:mail" class="h-4 w-4 text-orange-400 sm:h-5 sm:w-5" />

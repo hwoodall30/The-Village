@@ -1,4 +1,5 @@
 <script lang="ts">
+	import EventCalendar from '$lib/components/app/event-calendar.svelte';
 	import Footer from '$lib/components/app/footer.svelte';
 	import PageHeaderDescription from '$lib/components/app/page-header/page-header-description.svelte';
 	import PageHeaderTitle from '$lib/components/app/page-header/page-header-title.svelte';
@@ -11,6 +12,7 @@
 		CardHeader,
 		CardTitle
 	} from '$lib/components/ui/card';
+	import { Separator } from '$lib/components/ui/separator';
 	import events from '$lib/data/events.json';
 	import { cn } from '$lib/utils';
 	import Icon from '@iconify/svelte';
@@ -19,6 +21,39 @@
 	let sortedEvents = $derived(
 		events.sort((a, b) => new Date(b.start_time).getTime() - new Date(a.start_time).getTime())
 	);
+
+	let month = $derived(
+		new Intl.DateTimeFormat('en-US', {
+			month: 'long'
+		}).format(new Date())
+	);
+
+	let year = $derived(
+		new Intl.DateTimeFormat('en-US', {
+			year: 'numeric'
+		}).format(new Date())
+	);
+
+	let sortedAndFilteredEvents = $derived.by(() => {
+		if (!sortedEvents) return [];
+
+		return sortedEvents.filter((event) => {
+			const startTime = new Date(event.start_time);
+
+			const startTimeMonth = new Intl.DateTimeFormat('en-US', {
+				month: 'long'
+			}).format(startTime);
+
+			const startTimeYear = new Intl.DateTimeFormat('en-US', {
+				year: 'numeric'
+			}).format(startTime);
+
+			if (startTimeMonth === month && startTimeYear === year) {
+				return true;
+			}
+			return false;
+		});
+	});
 </script>
 
 <main class="grid">
@@ -37,22 +72,25 @@
 
 	<div class="px-5 py-20">
 		<div class="mx-auto max-w-7xl">
-			<h3 class="text-center text-3xl lg:text-4xl">Upcoming Events Timeline</h3>
+			<h3 class="text-center text-3xl lg:text-4xl">
+				Upcoming Events Timeline for {month}
+				{year}
+			</h3>
 			<PageHeaderDescription class="mt-5 text-center">
 				Mark your calendars for these exciting events and important dates coming up.
 			</PageHeaderDescription>
 
-			{#if sortedEvents?.length <= 0}
+			{#if sortedAndFilteredEvents?.length <= 0}
 				<div class="my-10 grid place-items-center text-xs text-muted-foreground">
-					<Icon icon="heroicons:calendar" class="mb-2 h-5 w-5 text-center" /> No events yet. Check back
-					later.
+					<Icon icon="heroicons:calendar" class="mb-2 h-5 w-5 text-center" /> No events yet this month.
+					Check back later.
 				</div>
 			{:else}
 				<div class="relative -z-1 mt-10 flex w-full flex-col items-center">
 					<div
 						class="absolute inset-y-0 left-1/2 hidden h-full w-0.75 -translate-x-1/2 rounded-full bg-blue-600/50 lg:block"
 					></div>
-					{#each sortedEvents as event, i (event.title)}
+					{#each sortedAndFilteredEvents as event, i (event.title)}
 						{@const isEven = i % 2 === 0}
 						{@const isOdd = i % 2 !== 0}
 						{@const startTimeHourMinute = new Date(event.start_time).toLocaleTimeString('en-US', {
@@ -160,6 +198,13 @@
 					{/each}
 				</div>
 			{/if}
+
+			<Separator class="my-10" />
+
+			<div class="w-full max-w-7xl">
+				<div class="mx-auto my-5 w-fit">See all events</div>
+				<EventCalendar class="mx-auto w-full" {events} />
+			</div>
 		</div>
 	</div>
 

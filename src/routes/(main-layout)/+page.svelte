@@ -6,8 +6,6 @@
 	import PageHeaderWrapper from '$lib/components/app/page-header/page-header-wrapper.svelte';
 	import PageHeader from '$lib/components/app/page-header/page-header.svelte';
 	import { Button } from '$lib/components/ui/button';
-	import stats from '$lib/data/stats.json';
-	import Icon from '@iconify/svelte';
 	import { ArrowRight } from '@lucide/svelte';
 </script>
 

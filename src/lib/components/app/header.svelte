@@ -4,8 +4,8 @@
 		{ name: 'About', href: '/about' },
 		{ name: 'Events', href: '/events' },
 		{ name: 'Programs', href: '/programs' },
-		{ name: 'Resources', href: '/resources' },
-		{ name: 'Contact', href: '/contact' }
+		{ name: 'Resources', href: '/resources' }
+		// { name: 'Contact', href: '/contact' }
 	] as const;
 </script>
 
@@ -64,7 +64,7 @@
 	</a>
 
 	<nav class="hidden lg:grid">
-		<div class="relative grid grid-cols-7 divide-x rounded-md border bg-sidebar p-0.5">
+		<div class="relative grid grid-cols-6 divide-x rounded-md border bg-sidebar p-0.5">
 			{#each navItems as navItem (navItem.name)}
 				{@const isActive =
 					navItem.href === '/'
