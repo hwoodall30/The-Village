@@ -1,10 +1,10 @@
 ---
 id: Syllabus
-title: "Here Is a Look Inside a Typical Class Week"
-date: "January 25, 2026"
-description: "This sample syllabus is designed to give families a clear picture of the structure, pace, and expectations of a typical week in our homeschool collaborative."
-author: "Alicia Woodall"
-category: "Resources"
+title: 'Here Is a Look Inside a Typical Class Week'
+date: 'January 25, 2026'
+description: 'This sample syllabus is designed to give families a clear picture of the structure, pace, and expectations of a typical week in our homeschool collaborative.'
+author: 'Alicia Woodall'
+category: 'Resources'
 ---
 
 # A Look Inside a Typical Class Week
@@ -54,4 +54,4 @@ For most families, at-home learning can be completed in short, focused blocks of
 This collaborative is not a traditional school-at-home model. It exists to support parents as the primary educators by providing structure, accountability, and community. We value mastery, consistency, and joy in learning and walk alongside families as they lead their child’s education.
 
 **View a sample weekly syllabus:**  
-[Download the example syllabus (PDF)](/files/sample-weekly-syllabus.pdf)
+<a href="/resources/syllabus.pdf" download="Syllabus.pdf">Download the example syllabus (PDF)</a>
