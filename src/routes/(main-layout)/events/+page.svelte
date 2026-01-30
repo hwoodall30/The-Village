@@ -14,12 +14,15 @@
 	} from '$lib/components/ui/card';
 	import { Separator } from '$lib/components/ui/separator';
 	import events from '$lib/data/events.json';
+	import type { Event } from '$lib/types/events';
 	import { cn } from '$lib/utils';
 	import Icon from '@iconify/svelte';
 	import { Clock, MapPin, Users } from '@lucide/svelte';
 
 	let sortedEvents = $derived(
-		events.sort((a, b) => new Date(b.start_time).getTime() - new Date(a.start_time).getTime())
+		(events as Event[]).sort(
+			(a, b) => new Date(b.start_time).getTime() - new Date(a.start_time).getTime()
+		)
 	);
 
 	let month = $derived(
@@ -116,7 +119,7 @@
 							timeZone: 'America/New_York',
 							year: 'numeric'
 						})}
-						<div class="grid w-full grid-cols-1 lg:grid-cols-2">
+						<div class="event-card grid w-full grid-cols-1 lg:grid-cols-2">
 							<div
 								class={cn('pb-5 lg:pb-10', {
 									'lg:order-2 lg:pl-5': isOdd,
@@ -210,3 +213,45 @@
 
 	<Footer />
 </main>
+
+<style>
+	.event-card {
+		@supports (animation-timeline: view()) {
+			animation: fadeIn both;
+			animation-timeline: view();
+			animation-range: entry 0% cover 20%;
+
+			@media (width >= 64rem) {
+				animation: fadeAndSlideIn both;
+				animation-timeline: view();
+				animation-range: entry 0% cover 20%;
+			}
+		}
+	}
+
+	@keyframes fadeAndSlideIn {
+		from {
+			translate: 0px 400px;
+			scale: 0.7;
+			opacity: 0;
+		}
+
+		to {
+			translate: 0px 0px;
+			scale: 1;
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			scale: 0.9;
+			opacity: 0;
+		}
+
+		to {
+			scale: 1;
+			opacity: 1;
+		}
+	}
+</style>
