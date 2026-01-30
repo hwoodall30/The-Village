@@ -1,6 +1,5 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import { ModeWatcher } from 'mode-watcher';
 	import { onNavigate } from '$app/navigation';
 
@@ -17,7 +16,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href="/icons/the-village-icon.svg" />
 	<title>The Village</title>
 </svelte:head>
 
