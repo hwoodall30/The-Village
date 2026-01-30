@@ -221,7 +221,7 @@
 			animation-timeline: view();
 			animation-range: entry 0% cover 20%;
 
-			@media (width >= 64rem) {
+			@media (min-width: 64rem) {
 				animation: fadeAndSlideIn both;
 				animation-timeline: view();
 				animation-range: entry 0% cover 20%;
