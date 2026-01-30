@@ -2,15 +2,15 @@
 	{
 		"name": "Jane Doe",
 		"position": "Director",
-		"image": "",
+		"image": "/staff/user.png",
 		"description": "We are excited to fill the role of Director very soon.",
 		"role": "Leadership"
 	},
 	{
 		"name": "John Doe",
 		"position": "Administrator",
-		"image": "",
+		"image": "/staff/user.png",
 		"description": "We are eager to fill the role of Administrator very soon.",
 		"role": "Leadership"
-	}	
+	}
 ]

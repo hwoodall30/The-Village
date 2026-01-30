@@ -54,7 +54,7 @@
 			class="grid h-8 w-8 place-items-center rounded-md border border-blue-600 bg-blue-600 font-semibold"
 		>
 			<img
-				src="./icons/the-village-icon.svg"
+				src="/icons/the-village-icon.svg"
 				alt="The Village Icon"
 				class="h-5 w-5 brightness-0 invert"
 			/>
@@ -151,7 +151,7 @@
 
 						{#if isActive}
 							<div
-								class="absolute inset-x-0 bottom-0 h-[2px] w-full rounded-full bg-blue-500 lg:[view-transition-name:indicator]"
+								class="absolute inset-x-0 bottom-0 h-0.5 w-full rounded-full bg-blue-500 lg:[view-transition-name:indicator]"
 							></div>
 						{/if}
 					</a>
@@ -159,10 +159,10 @@
 
 				<Button onclick={toggleMode} variant="outline" class="w-full">
 					<SunIcon
-						class="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 !transition-all dark:scale-0 dark:-rotate-90"
+						class="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all! dark:scale-0 dark:-rotate-90"
 					/>
 					<MoonIcon
-						class="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 !transition-all dark:scale-100 dark:rotate-0"
+						class="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all! dark:scale-100 dark:rotate-0"
 					/>
 					<span class="sr-only">Toggle theme</span>
 				</Button>

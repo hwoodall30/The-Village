@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Footer from '$lib/components/app/footer.svelte';
-	import InterestForm from '$lib/components/app/interest-form.svelte';
 	import PageHeaderDescription from '$lib/components/app/page-header/page-header-description.svelte';
 	import PageHeaderTitle from '$lib/components/app/page-header/page-header-title.svelte';
 	import PageHeaderWrapper from '$lib/components/app/page-header/page-header-wrapper.svelte';
@@ -16,7 +15,7 @@
 			<div class="grid place-items-center">
 				<img
 					class="mb-10 max-w-120 rounded-md p-5 invert dark:invert-0"
-					src="./icons/the-village-logo.svg"
+					src="/icons/the-village-logo.svg"
 					alt="placeholder"
 				/>
 			</div>
