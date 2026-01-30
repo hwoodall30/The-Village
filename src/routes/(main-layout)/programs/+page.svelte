@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
 	import Footer from '$lib/components/app/footer.svelte';
 	import PageHeaderDescription from '$lib/components/app/page-header/page-header-description.svelte';
 	import PageHeaderTitle from '$lib/components/app/page-header/page-header-title.svelte';
@@ -111,11 +110,7 @@
 			{#if filteredPrograms.length > 0}
 				<div class="mt-5 grid grid-cols-1 gap-4 lg:grid-cols-2">
 					{#each filteredPrograms as program (program.id)}
-						<a
-							href={resolve(`/programs/${program.id}`)}
-							class="row-span-2 grid h-full grid-rows-subgrid"
-							animate:flip={{ duration: 300 }}
-						>
+						<div class="row-span-2 grid h-full grid-rows-subgrid" animate:flip={{ duration: 300 }}>
 							<Card class="row-span-2 grid h-full grid-rows-subgrid">
 								<CardHeader class="h-fit">
 									<CardTitle>{program.title}</CardTitle>
@@ -131,7 +126,7 @@
 									</div>
 								</CardContent>
 							</Card>
-						</a>
+						</div>
 					{/each}
 				</div>
 			{:else}
