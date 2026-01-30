@@ -15,10 +15,10 @@
 	<title>{metadata.title}</title>
 </svelte:head>
 
-<main class="grid h-full grid-rows-[auto_1fr_auto]">
+<main class="grid min-h-full grid-rows-[auto_1fr_auto]">
 	<Header />
 
-	<article class="prose dark:prose-invert mx-auto h-full w-full max-w-7xl p-5">
+	<article class="mx-auto prose h-full w-full max-w-7xl p-5 py-20 dark:prose-invert">
 		<Button class="my-8" onclick={() => goto(resolve('/programs'))}
 			><ArrowLeft /> Back to Programs</Button
 		>
