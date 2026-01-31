@@ -28,7 +28,7 @@ This model is designed to support parents while keeping education parent-led.
 
 ## Where will the co-op be located?
 
-Mt. Lebanon Baptist Church
+We have a location that we are excited to share with the public very soon!
 
 ## Who will be teaching?
 
