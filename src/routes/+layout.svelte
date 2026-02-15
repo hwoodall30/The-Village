@@ -6,6 +6,10 @@
 	let { children } = $props();
 
 	onNavigate(() => {
+		window.gtag('event', 'page_view', {
+			page_path: location.pathname + location.search
+		});
+
 		if (!document.startViewTransition) return;
 
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any

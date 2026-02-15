@@ -4,6 +4,22 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0HXW0MN4Z3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				window.dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-0HXW0MN4Z3');
+
+			gtag('event', 'page_view', {
+				page_path: location.pathname + location.search
+			});
+		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover" class="h-full">
 		<div style="display: contents">%sveltekit.body%</div>
