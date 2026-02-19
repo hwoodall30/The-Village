@@ -30,12 +30,8 @@
 				collaboration.</PageHeaderDescription
 			>
 			<div class="mt-8 grid w-full grid-cols-1 gap-2 lg:grid-cols-2">
-				<Button
-					href="https://docs.google.com/forms/d/e/1FAIpQLSdpbLI-Z8OMF3cFxCiqJNe3IlerqqAj885tbXNsnDW4VAHTYw/viewform"
-					target="_blank"
-					rel="noreferrer"
-					class="bg-blue-500 text-sm text-white hover:bg-blue-700"
-					>Interest Form <Icon icon="lucide:form" />
+				<Button href="/events" class="bg-blue-500 text-sm text-white hover:bg-blue-700"
+					>See Events <Icon icon="lucide:calendar" />
 				</Button>
 
 				<Button
