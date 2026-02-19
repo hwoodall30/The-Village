@@ -18,7 +18,7 @@
 			icon: 'lucide:heart-handshake'
 		},
 		{
-			name: 'Empowred Growth',
+			name: 'Empowered Growth',
 			description: 'Our structure provides family with freedom, margin, and confidence to thrive.',
 			icon: 'lucide:rocket'
 		},
