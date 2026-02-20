@@ -27,13 +27,13 @@
 				/>
 			</a>
 
-			<!-- <a
+			<a
 				target="_blank"
 				href="https://maps.app.goo.gl/waCCPocKkGA2ckMp8"
 				class="rounded-md border border-green-500/50 bg-linear-to-br from-green-600/20 to-emerald-600/20 p-2"
 			>
 				<Icon icon="lucide:map-pin" class="h-4 w-4 text-emerald-500 sm:h-5 sm:w-5" />
-			</a> -->
+			</a>
 		</div>
 	</div>
 </footer>
