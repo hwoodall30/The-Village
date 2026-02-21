@@ -57,7 +57,7 @@
 	}
 </script>
 
-<main class="grid h-full grid-rows-[auto_auto_1fr]">
+<main class="grid h-full grid-rows-[auto_1fr_auto]">
 	<PageHeaderWrapper>
 		<PageHeader>
 			<PageHeaderTitle class="text-center">
