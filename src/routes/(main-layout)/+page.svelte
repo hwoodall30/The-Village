@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Footer from '$lib/components/app/footer.svelte';
 	import PageHeaderDescription from '$lib/components/app/page-header/page-header-description.svelte';
+	import PageHeaderImage from '$lib/components/app/page-header/page-header-image.svelte';
 	import PageHeaderTitle from '$lib/components/app/page-header/page-header-title.svelte';
 	import PageHeaderWrapper from '$lib/components/app/page-header/page-header-wrapper.svelte';
 	import PageHeader from '$lib/components/app/page-header/page-header.svelte';
@@ -10,8 +11,9 @@
 </script>
 
 <main class="grid h-full grid-rows-[auto_auto_1fr]">
-	<PageHeaderWrapper>
-		<PageHeader class="grid grid-rows-[auto_1fr] gap-10  lg:grid-rows-1">
+	<PageHeaderWrapper class="bg-transparent">
+		<PageHeaderImage src="/header-image.jpg" class="blur-[3px]" />
+		<PageHeader class="grid grid-rows-[auto_1fr] gap-10 lg:grid-rows-1">
 			<div class="grid place-items-center">
 				<img
 					class="mb-10 max-w-120 rounded-md p-5 invert dark:invert-0"
@@ -19,12 +21,14 @@
 					alt="placeholder"
 				/>
 			</div>
-			<PageHeaderTitle class="text-center">
+			<PageHeaderTitle class="text-center text-white text-shadow-neutral-700 text-shadow-xs">
 				Welcome to <span class="text-blue-500 [view-transition-name:page-header-title]"
 					>The Village</span
 				> Homeschool Collaborative</PageHeaderTitle
 			>
-			<PageHeaderDescription class="text-center">
+			<PageHeaderDescription
+				class="text-center text-neutral-100 text-shadow-neutral-700 text-shadow-xs dark:text-neutral-300"
+			>
 				Our vision is to create a Christ-centered educational community where families are empowered
 				and learning blends the best of homeschool and traditional school with flexibility and
 				collaboration.</PageHeaderDescription
@@ -37,7 +41,7 @@
 				<Button
 					href="/resources"
 					variant="outline"
-					class="dark:hover-text-blue-500 border-blue-600 text-sm text-blue-500 hover:text-blue-700 dark:border-blue-500 dark:text-blue-500"
+					class="dark:hover-text-blue-500 border-blue-600/20 text-sm text-blue-500 backdrop-blur-sm hover:text-blue-700 dark:border-blue-500/20 dark:text-blue-500"
 					>See Resources <ArrowRight /></Button
 				>
 			</div>

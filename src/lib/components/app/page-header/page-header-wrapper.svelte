@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class={cn('border-b bg-sidebar px-5 py-20 lg:py-32', className)}
+	class={cn('relative border-b bg-sidebar px-5 py-20 lg:py-32', className)}
 	bind:this={ref}
 	{...restProps}
 >

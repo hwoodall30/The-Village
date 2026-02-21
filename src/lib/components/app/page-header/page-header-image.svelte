@@ -11,7 +11,10 @@
 </script>
 
 <img
-	class={cn('h-100 w-full rounded-md object-cover shadow', className)}
+	class={cn(
+		'pointer-events-none absolute inset-0 -z-10 h-full object-cover opacity-90 dark:opacity-30',
+		className
+	)}
 	bind:this={ref}
 	{...restProps}
 />
