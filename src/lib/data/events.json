@@ -1,14 +1,16 @@
-[{
-  "title": "Parent Interest Meeting",
-  "date": "2026-03-05",
-  "time": "6:00 PM",
-  "location": "Mt. Lebanon Baptist Church",
-  "address": "3508 Wildwood Rd, Maryville, TN 37804"
-},
-{
-  "title": "Parent Interest Meeting",
-  "date": "2026-03-10",
-  "time": "6:00 PM",
-  "location": "Mt. Lebanon Baptist Church",
-  "address": "3508 Wildwood Rd, Maryville, TN 37804"
-}]
+[
+  {
+    "title": "Parent Interest Meeting",
+    "description": "These meetings are designed to help families learn more about the vision for The Village, ask questions, and discern whether this community may be a good fit before registration opens. Whether you are already homeschooling or simply exploring the idea, you are welcome to join us. There is no obligation to enroll—this is simply an opportunity to connect and learn more.",
+    "start_time": "2026-03-05T18:00:00.000Z",
+    "end_time": "2026-03-05T20:00:00.000Z",
+    "location": "3508 Wildwood Rd, Maryville, TN 37804"
+  },
+  {
+    "title": "Parent Interest Meeting",
+    "description": "These meetings are designed to help families learn more about the vision for The Village, ask questions, and discern whether this community may be a good fit before registration opens. Whether you are already homeschooling or simply exploring the idea, you are welcome to join us. There is no obligation to enroll—this is simply an opportunity to connect and learn more.",
+    "start_time": "2026-03-10T18:00:00.000Z",
+    "end_time": "2026-03-10T20:00:00.000Z",
+    "location": "3508 Wildwood Rd, Maryville, TN 37804"
+  }
+]
