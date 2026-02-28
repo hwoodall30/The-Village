@@ -17,7 +17,7 @@
 	import type { Event } from '$lib/types/events';
 	import { cn } from '$lib/utils';
 	import Icon from '@iconify/svelte';
-	import { Clock, MapPin, Users } from '@lucide/svelte';
+	import { Clock, MapPin, Users, Link, ArrowRight } from '@lucide/svelte';
 	import { SvelteDate } from 'svelte/reactivity';
 
 	let sortedEvents = $derived(
@@ -69,7 +69,7 @@
 					Check back later.
 				</div>
 			{:else}
-				<div class="relative -z-1 mt-10 flex w-full flex-col items-center">
+				<div class="relative mt-10 flex w-full flex-col items-center">
 					<div
 						class="absolute inset-y-0 left-1/2 hidden h-full w-0.75 -translate-x-1/2 rounded-full bg-blue-600/50 lg:block"
 					></div>
@@ -146,6 +146,21 @@
 												<Users class="h-4 w-4" />
 												{event.attendees}
 											</div>
+										{/if}
+
+										{#if event.link}
+											<a
+												class="group flex w-fit items-center gap-2 text-xs text-muted-foreground"
+												href={event.link}
+												target="_blank"
+												rel="noreferrer"
+											>
+												<Link class="h-4 w-4" />
+												<span class="group-hover:underline">See more</span>
+												<ArrowRight
+													class="size-3.5 -translate-x-1 transition-transform group-hover:translate-x-0"
+												/>
+											</a>
 										{/if}
 									</CardContent>
 								</Card>
