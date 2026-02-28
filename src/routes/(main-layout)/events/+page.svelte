@@ -136,10 +136,15 @@
 										</div>
 
 										{#if event.location}
-											<div class="flex items-center gap-2 text-xs text-muted-foreground">
+											<a
+												class="flex w-fit items-center gap-2 text-xs text-muted-foreground hover:underline"
+												href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
+												target="_blank"
+												rel="noreferrer"
+											>
 												<MapPin class="h-4 w-4" />
 												{event.location}
-											</div>
+											</a>
 										{/if}
 										{#if event.attendees}
 											<div class="flex items-center gap-2 text-xs text-muted-foreground">
