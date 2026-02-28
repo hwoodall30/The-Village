@@ -95,6 +95,12 @@
 							day: 'numeric'
 						})}
 
+						{@const endTimeDate = new Date(event.end_time).toLocaleDateString('en-US', {
+							timeZone: 'America/New_York',
+							month: 'short',
+							day: 'numeric'
+						})}
+
 						{@const startTimeYear = new Date(event.start_time).toLocaleDateString('en-US', {
 							timeZone: 'America/New_York',
 							year: 'numeric'
@@ -124,7 +130,9 @@
 									<CardContent class="flex flex-col gap-2">
 										<div class="flex items-center gap-2 text-xs text-muted-foreground">
 											<Clock class="h-4 w-4" />
-											{startTimeHourMinute} - {endTimeHourMinute}
+											{startTimeDate}
+											{startTimeHourMinute} - {endTimeDate}
+											{endTimeHourMinute}
 										</div>
 
 										{#if event.location}
