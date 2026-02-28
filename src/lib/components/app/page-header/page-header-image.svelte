@@ -22,7 +22,7 @@
 	loading="eager"
 	fetchpriority="high"
 	class={cn(
-		'pointer-events-none absolute inset-0 -z-10 h-full object-cover transition-opacity duration-300',
+		'pointer-events-none absolute inset-0 -z-10 h-full object-cover transition-opacity',
 		{ 'opacity-90 dark:opacity-30': !isLoading },
 		{ 'opacity-0 dark:opacity-0': isLoading },
 		className
