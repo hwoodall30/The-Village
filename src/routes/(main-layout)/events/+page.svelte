@@ -70,10 +70,7 @@
 
 	<div class="px-5 py-20">
 		<div class="mx-auto max-w-7xl">
-			<h3 class="text-center text-3xl lg:text-4xl">
-				Upcoming Events Timeline for {month}
-				{year}
-			</h3>
+			<h3 class="text-center text-3xl lg:text-4xl">Upcoming Events</h3>
 			<PageHeaderDescription class="mt-5 text-center">
 				Mark your calendars for these exciting events and important dates coming up.
 			</PageHeaderDescription>
