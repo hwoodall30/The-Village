@@ -14,5 +14,17 @@
 		"end_time": "2026-03-10T20:00:00.000",
 		"location": "3508 Wildwood Rd, Maryville, TN 37804",
 		"attendees": "Parents"
+	},
+	{
+		"title": "Priority Enrollment Registration",
+		"description": "We're excited to share that Priority Enrollment for The Village Collaborative will be open in March for families who attended one of our Parent Interest Meetings.",
+		"start_time": "2026-03-11T00:00:00.000Z",
+		"end_time": "2026-03-18T00:00:00.000Z"
+	},
+	{
+		"title": "Enrollment Registration",
+		"description": "We're excited to officially open enrollment for the 2026 school year.",
+		"start_time": "2026-03-18T00:00:00.000Z",
+		"end_time": "2026-03-25T00:00:00.000Z"
 	}
 ]
