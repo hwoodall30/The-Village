@@ -8,18 +8,25 @@
 	import { Button } from '$lib/components/ui/button';
 	import Icon from '@iconify/svelte';
 	import { ArrowRight } from '@lucide/svelte';
+	import HeroImage from '$lib/assets/header-image.webp';
+	import VillageLogo from '$lib/assets/icons/the-village-logo.svg';
 </script>
+
+<svelte:head>
+	<link rel="preload" as="image" href={HeroImage} fetchpriority="high" />
+	<link rel="preload" as="image" href={VillageLogo} fetchpriority="high" />
+</svelte:head>
 
 <main class="grid h-full grid-rows-[auto_auto_1fr]">
 	<PageHeaderWrapper class="bg-transparent">
-		<PageHeaderImage src="/header-image.webp" />
+		<PageHeaderImage src={HeroImage} />
 		<PageHeader class="grid grid-rows-[auto_1fr] gap-10 lg:grid-rows-1">
 			<div class="grid place-items-center">
 				<img
 					loading="eager"
 					fetchpriority="high"
 					class="mb-10 max-w-120 rounded-md p-5 invert dark:invert-0"
-					src="/icons/the-village-logo.svg"
+					src={VillageLogo}
 					alt="Hero"
 				/>
 			</div>

@@ -21,6 +21,7 @@
 	import type { Attachment } from 'svelte/attachments';
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
+	import VillageIcon from '$lib/assets/icons/the-village-icon.svg';
 
 	let open = $state(false);
 
@@ -53,11 +54,7 @@
 		<div
 			class="grid h-8 w-8 place-items-center rounded-md border border-blue-600 bg-blue-600 font-semibold"
 		>
-			<img
-				src="/icons/the-village-icon.svg"
-				alt="The Village Icon"
-				class="h-5 w-5 brightness-0 invert"
-			/>
+			<img src={VillageIcon} alt="The Village Icon" class="h-5 w-5 brightness-0 invert" />
 		</div>
 
 		The Village
