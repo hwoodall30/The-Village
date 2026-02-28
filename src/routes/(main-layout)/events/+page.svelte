@@ -126,14 +126,19 @@
 											<Clock class="h-4 w-4" />
 											{startTimeHourMinute} - {endTimeHourMinute}
 										</div>
-										<div class="flex items-center gap-2 text-xs text-muted-foreground">
-											<MapPin class="h-4 w-4" />
-											{event.location}
-										</div>
-										<div class="flex items-center gap-2 text-xs text-muted-foreground">
-											<Users class="h-4 w-4" />
-											{event.attendees}
-										</div>
+
+										{#if event.location}
+											<div class="flex items-center gap-2 text-xs text-muted-foreground">
+												<MapPin class="h-4 w-4" />
+												{event.location}
+											</div>
+										{/if}
+										{#if event.attendees}
+											<div class="flex items-center gap-2 text-xs text-muted-foreground">
+												<Users class="h-4 w-4" />
+												{event.attendees}
+											</div>
+										{/if}
 									</CardContent>
 								</Card>
 							</div>
