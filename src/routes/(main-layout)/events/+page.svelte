@@ -18,6 +18,7 @@
 	import { cn } from '$lib/utils';
 	import Icon from '@iconify/svelte';
 	import { Clock, MapPin, Users } from '@lucide/svelte';
+	import { SvelteDate } from 'svelte/reactivity';
 
 	let sortedEvents = $derived(
 		(events as Event[]).sort(
@@ -40,21 +41,15 @@
 	let sortedAndFilteredEvents = $derived.by(() => {
 		if (!sortedEvents) return [];
 
+		const now = new SvelteDate();
+		now.setHours(0, 0, 0, 0);
+
+		const thirtyDaysFromNow = new SvelteDate(now);
+		thirtyDaysFromNow.setDate(thirtyDaysFromNow.getDate() + 30);
+
 		return sortedEvents.filter((event) => {
 			const startTime = new Date(event.start_time);
-
-			const startTimeMonth = new Intl.DateTimeFormat('en-US', {
-				month: 'long'
-			}).format(startTime);
-
-			const startTimeYear = new Intl.DateTimeFormat('en-US', {
-				year: 'numeric'
-			}).format(startTime);
-
-			if (startTimeMonth === month && startTimeYear === year) {
-				return true;
-			}
-			return false;
+			return startTime >= now && startTime <= thirtyDaysFromNow;
 		});
 	});
 </script>
@@ -93,7 +88,7 @@
 					<div
 						class="absolute inset-y-0 left-1/2 hidden h-full w-0.75 -translate-x-1/2 rounded-full bg-blue-600/50 lg:block"
 					></div>
-					{#each sortedAndFilteredEvents as event, i (event.title)}
+					{#each sortedAndFilteredEvents as event, i (event.title + i)}
 						{@const isEven = i % 2 === 0}
 						{@const isOdd = i % 2 !== 0}
 						{@const startTimeHourMinute = new Date(event.start_time).toLocaleTimeString('en-US', {
@@ -129,10 +124,10 @@
 								<Card>
 									<CardHeader class="flex items-center justify-between">
 										<div>
-											<CardTitle>{event.title}</CardTitle>
+											<CardTitle class="mb-2">{event.title}</CardTitle>
 											<CardDescription>{event.description}</CardDescription>
 										</div>
-										<div class="flex flex-col justify-start">
+										<div class="flex h-full flex-col justify-start whitespace-nowrap">
 											<p class="text-lg font-semibold">
 												{startTimeDate}
 											</p>

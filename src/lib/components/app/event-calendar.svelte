@@ -18,7 +18,7 @@
 	} = $props();
 
 	let value = $state<DateValue | undefined>(
-		new CalendarDate(new Date().getFullYear(), new Date().getMonth(), new Date().getDate())
+		new CalendarDate(new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate())
 	);
 
 	let filteredEvents = $derived.by(() => {

@@ -18,6 +18,7 @@
 	import { flip } from 'svelte/animate';
 	import { fade } from 'svelte/transition';
 	import careers from '$lib/data/careers.json';
+	import ApplicationDialog from '$lib/components/app/application-dialog.svelte';
 
 	let careersList = $derived(careers.filter((career) => career.active === true));
 
@@ -124,9 +125,7 @@
 										<CardDescription>{career.description}</CardDescription>
 									</CardHeader>
 									<CardContent>
-										<Button href={career.application_link} target="_blank" variant="outline">
-											Apply Now
-										</Button>
+										<ApplicationDialog />
 									</CardContent>
 								</Card>
 							</div>
