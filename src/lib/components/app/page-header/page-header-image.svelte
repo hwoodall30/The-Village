@@ -12,7 +12,6 @@
 	let isLoading = $state(true);
 
 	function onImageLoad() {
-		console.log('test loaded');
 		isLoading = false;
 	}
 </script>

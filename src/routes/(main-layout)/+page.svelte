@@ -12,7 +12,7 @@
 
 <main class="grid h-full grid-rows-[auto_auto_1fr]">
 	<PageHeaderWrapper class="bg-transparent">
-		<PageHeaderImage src="/header-image.jpg" />
+		<PageHeaderImage src="/header-image.webp" />
 		<PageHeader class="grid grid-rows-[auto_1fr] gap-10 lg:grid-rows-1">
 			<div class="grid place-items-center">
 				<img
