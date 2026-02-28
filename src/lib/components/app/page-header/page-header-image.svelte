@@ -8,11 +8,23 @@
 		class: className,
 		...restProps
 	}: WithElementRef<HTMLImgAttributes> = $props();
+
+	let isLoading = $state(true);
+
+	function onImageLoad() {
+		console.log('test loaded');
+		isLoading = false;
+	}
 </script>
 
 <img
+	onload={onImageLoad}
+	loading="eager"
+	fetchpriority="high"
 	class={cn(
-		'pointer-events-none absolute inset-0 -z-10 h-full object-cover opacity-90 dark:opacity-30',
+		'pointer-events-none absolute inset-0 -z-10 h-full object-cover transition-opacity duration-300',
+		{ 'opacity-90 dark:opacity-30': !isLoading },
+		{ 'opacity-0 dark:opacity-0': isLoading },
 		className
 	)}
 	bind:this={ref}

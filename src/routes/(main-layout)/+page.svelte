@@ -16,9 +16,11 @@
 		<PageHeader class="grid grid-rows-[auto_1fr] gap-10 lg:grid-rows-1">
 			<div class="grid place-items-center">
 				<img
+					loading="eager"
+					fetchpriority="high"
 					class="mb-10 max-w-120 rounded-md p-5 invert dark:invert-0"
 					src="/icons/the-village-logo.svg"
-					alt="placeholder"
+					alt="Hero"
 				/>
 			</div>
 			<PageHeaderTitle class="text-center text-white text-shadow-neutral-700 text-shadow-xs">
