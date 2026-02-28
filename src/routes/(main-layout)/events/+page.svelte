@@ -22,20 +22,8 @@
 
 	let sortedEvents = $derived(
 		(events as Event[]).sort(
-			(a, b) => new Date(b.start_time).getTime() - new Date(a.start_time).getTime()
+			(a, b) => new Date(a.start_time).getTime() - new Date(b.start_time).getTime()
 		)
-	);
-
-	let month = $derived(
-		new Intl.DateTimeFormat('en-US', {
-			month: 'long'
-		}).format(new Date())
-	);
-
-	let year = $derived(
-		new Intl.DateTimeFormat('en-US', {
-			year: 'numeric'
-		}).format(new Date())
 	);
 
 	let sortedAndFilteredEvents = $derived.by(() => {
