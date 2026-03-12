@@ -1,5 +1,5 @@
 ---
-id: q-and-a
+id: Q&A
 title: "Questions and Answers"
 date: "March 11, 2026"
 description: "We’ve been getting a lot of great questions about the co-op, and we’re encouraged by the interest. Below are answers to the questions we’re hearing most often."
