@@ -1,7 +1,7 @@
 ---
-id: Q&A
+id: q-and-a
 title: "Questions and Answers"
-date: "January 25, 2026"
+date: "March 11, 2026"
 description: "We’ve been getting a lot of great questions about the co-op, and we’re encouraged by the interest. Below are answers to the questions we’re hearing most often."
 author: "Alicia Woodall"
 category: "Community"
@@ -11,87 +11,135 @@ category: "Community"
 
 ## Is this still a homeschool co-op?
 
-Yes. This is a parent-led homeschool co-op. Parents retain full responsibility for their child’s education and will still be responsible for:
+Yes. The Village Collaborative is a parent-led homeschool co-op. Parents retain full responsibility for their child’s education and will continue to meet all homeschool requirements.
+
+Parents will still be responsible for:
 
 - Filing intent to homeschool with their county or being under an umbrella school  
-  *(Resources for this will be provided)*
-- Reporting attendance and grades to their county
-
-## What makes this different from other co-ops or hybrid programs?
-
-- All students follow the same curriculum
-- Families move at a shared pace
-- There is more structure and support from the co-op
-- Parents are not expected to choose a curriculum or create the schedule on their own
+- Reporting attendance and grades to their county  
+- Maintaining required records, such as immunization documentation if applicable  
+  *(Resources for this will be provided.)*
 
 This model is designed to support parents while keeping education parent-led.
 
+## What makes this different from other co-ops or hybrid programs?
+
+All students follow the same curriculum and move at a shared pace, allowing teachers to provide more structure and academic support while families remain responsible for homeschooling.
+
+Students attend two structured school days each week where experienced teachers lead instruction in core subjects. Teachers provide clear pacing plans and guidance so families know what to work on at home.
+
+Teachers also remain available to answer questions and support families throughout the school year. This model allows parents to stay closely involved in their child’s education while receiving more academic structure than most traditional co-ops.
+
 ## Where will the co-op be located?
 
-We have a location that we are excited to share with the public very soon!
+Village Collaborative will meet at Mt. Lebanon Baptist Church for the 2026–2027 school year.
+
+## Who will be the Director?
+
+Kim Fuchs serves as the founding director of Village Collaborative. She provides academic leadership and oversees curriculum selection, teacher support and training, and family admissions.
 
 ## Who will be teaching?
 
 We have not started hiring yet, but we are seeking educators who:
 
-- Share our vision, mission, and core values
-- Have teaching experience
-- Have strong classroom management skills
-- Have experience with different learning styles and methods
-- Have familiarity with educational resources beyond what most parents have at home
+- Share our vision, mission, and core values  
+- Have teaching experience  
+- Have strong classroom management skills  
+
+Possible teacher backgrounds may include certified teachers, retired teachers, and experienced homeschool educators.
+
+The hiring process will involve the director along with experienced public school educators and experienced homeschool educators to help ensure strong academic leadership.
 
 ## What does a typical school day look like?
 
-Our on-campus days are structured similarly to a traditional school day and include:
+Our on-campus days are structured similarly to a traditional school day and are designed to maximize learning during the time students are on campus.
 
-- Math
-- Reading
-- Language Arts
-- Writing
-- Science
-- Recess
+Students will receive instruction in:
 
-In addition, one day per week students will rotate through:
+- Math  
+- Reading  
+- Language Arts  
+- Writing  
+- Science  
 
-- Bible
-- Art
-- Music
-- Gym
-- Library
+In addition, students will rotate through enrichment classes such as:
 
-## How does curriculum work?
+- Bible  
+- Art  
+- Music  
+- Physical Education  
 
-The director will choose the curriculum prior to the school year beginning. Teachers will then help set the pacing and structure so it is manageable and clear for families.
+## What is the learning environment like?
 
-Curriculum has not been finalized, but we have trusted personnel who are looking into the best options for our families.
+Class sizes will be intentionally small, averaging around 14 students per class. This allows teachers to know students well and provide more individualized support.
 
-On school days, teachers lead instruction. On home days, parents lead instruction in a clear, sequential order.
+Teachers will work from the chosen curriculum while also incorporating supplemental activities to reinforce learning and keep students engaged.
+
+## How does the Village partner with parents?
+
+Village Collaborative is designed to work alongside families rather than replace the role of the parent. Curriculum is selected prior to the school year, and teachers will create pacing plans so learning remains clear and manageable for families.
+
+On school days, teachers lead instruction. On home days, parents guide learning using the pacing plans.
+
+Teachers will support families through:
+
+- Monthly pacing plans  
+- Curriculum guidance  
+- Ongoing communication and support  
+- Parent-teacher conferences  
+
+## What curriculum will you be using?
+
+Curriculum selection is currently in progress and will be announced soon.
 
 ## What will it cost?
 
-Our goal is to keep tuition as close to **$3,000 per student** for the full school year as possible. Curriculum is not included in the tuition cost.
+Our goal is to keep tuition as close to **$3,000 per student** for the full school year as possible.
+
+**$300 per month for 10 months**
+
+Tuition does not include curriculum or field trips.
+
+Each student will receive one Village uniform shirt, and additional shirts will be available for purchase.
 
 ## What is the schedule?
 
-- Two days per week on campus
-- 8:30 AM–2:30 PM
+Students attend campus two days per week from **8:30 AM – 2:30 PM** on **Monday and Wednesday**.
 
-## Are parents required to volunteer?
+The school year runs **August through May** and includes approximately **75 instructional days**.
 
-Each family is strongly encouraged to help with two events per year (class parties, school-wide events, fundraisers, etc.) to cultivate community and help take the load off administration.
-
-## How do we apply?
-
-We plan to start sharing more about this in the next few weeks.
+Weather-related closures will follow the schedule of Mt. Lebanon Church.
 
 ## What does a yearly calendar look like?
 
-Examples include:
+Examples of events and activities throughout the year may include:
 
-- Monthly chapel
-- Christmas program
-- Thanksgiving feast
-- Optional field trips
-- Fall break
-- Christmas break
-- Spring break
+- Monthly chapels  
+- Optional field trips  
+- Thanksgiving feast  
+- Christmas program  
+- Valentine’s exchange  
+- Class birthday parties  
+- Field Day  
+
+## Are parents required to volunteer?
+
+Unlike many co-ops, volunteering is not required. Families are in different seasons of life, and we want participation to remain flexible.
+
+However, families are always welcome to help when it works for them. Opportunities may include assisting with events, helping with classroom activities, supporting lunch or recess, or participating in fundraising events.
+
+## How are you handling safety?
+
+Mt. Lebanon is a secure building with locked entrances. After drop-off, the main entrance is the only point of entry and requires visitors to be buzzed in by the church office.
+
+Multiple Mt. Lebanon staff members are on-site during the day, along with Village staff.
+
+Students and teachers will wear Village shirts for easy identification, and all staff members will complete background checks.
+
+Students will be checked in and out using the Brightwheel app.
+
+## How do we apply?
+
+Registration opens **March 18th** to everyone.
+
+Click the **Register** button on our home page to get started.
