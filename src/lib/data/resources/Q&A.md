@@ -90,7 +90,7 @@ Teachers will support families through:
 
 ## What curriculum will you be using?
 
-Curriculum selection is currently in progress and will be announced soon.
+Our curriculum search has been narrowed down to Lifepac and Christian Light. We will announce our final decision soon!
 
 ## What will it cost?
 
