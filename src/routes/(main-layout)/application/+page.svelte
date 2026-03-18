@@ -64,7 +64,7 @@
 
 			<p class="text-xl">How many children are you applying?</p>
 
-			<div class="mt-5 mb-5 grid w-full grid-cols-2 gap-10">
+			<div class="mt-5 mb-5 grid w-full grid-cols-2 gap-5 md:gap-10">
 				<Card
 					class={cn({ 'ring-2 ring-blue-500': selected === 'single' }, 'transition-all')}
 					onclick={() => handleChangeSelection('single')}
@@ -76,9 +76,11 @@
 							<User />
 						</div>
 
-						<p class="text-xl font-semibold">One Child</p>
+						<p class="text-center text-sm font-semibold md:text-xl">One Child</p>
 
-						<p class="mt-2 text-xs text-muted-foreground">Single child application process</p>
+						<p class="mt-2 text-center text-xs text-muted-foreground">
+							Single child application process
+						</p>
 					</CardContent>
 				</Card>
 
@@ -93,9 +95,11 @@
 							<Users />
 						</div>
 
-						<p class="text-xl font-semibold">Two or More Children</p>
+						<p class="text-center text-sm font-semibold md:text-xl">Two or More Children</p>
 
-						<p class="mt-2 text-xs text-muted-foreground">Multi-child application steps</p>
+						<p class="mt-2 text-center text-xs text-muted-foreground">
+							Multi-child application steps
+						</p>
 					</CardContent>
 				</Card>
 			</div>
@@ -137,7 +141,7 @@
 								>
 							</CardHeader>
 
-							<CardContent>
+							<CardContent class="px-2">
 								<Card>
 									<CardHeader>
 										<CardTitle class="flex items-center gap-2">
@@ -153,7 +157,7 @@
 										>
 									</CardHeader>
 
-									<CardContent>
+									<CardContent class="px-2">
 										<Button
 											onclick={setStepOneComplete}
 											href="https://schools.mybrightwheel.com/sign-in?redirect_path=/admissions/packet/a90573c0-3ee4-4c60-bdf8-00a2e7f53a37/fill?school_id=3ac671b7-8fa7-4426-a881-cea74913544c"
@@ -181,7 +185,7 @@
 										>
 									</CardHeader>
 
-									<CardContent>
+									<CardContent class="px-2">
 										<Button
 											href="https://schools.mybrightwheel.com/sign-in?redirect_path=/admissions/packet/674b7ff6-7427-4282-8e08-5f9a8ce35147/fill?school_id=3ac671b7-8fa7-4426-a881-cea74913544c"
 											target="_blank"
@@ -192,7 +196,7 @@
 								</Card>
 							</CardContent>
 
-							<CardFooter>
+							<CardFooter class="px-2">
 								<Alert>
 									<CircleAlert />
 									<AlertDescription
