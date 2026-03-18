@@ -66,12 +66,18 @@
 
 			<div class="mt-5 mb-5 grid w-full grid-cols-2 gap-5 md:gap-10">
 				<Card
-					class={cn({ 'ring-2 ring-blue-500': selected === 'single' }, 'transition-all')}
+					class={cn({ 'ring-2 ring-blue-500': selected === 'single' }, 'group transition-all')}
 					onclick={() => handleChangeSelection('single')}
 				>
 					<CardContent class="grid place-items-center">
 						<div
-							class="mb-5 grid size-14 place-items-center rounded-full bg-blue-500 p-3 text-white"
+							class={cn(
+								'mb-5  grid size-14 place-items-center rounded-full bg-neutral-800 transition-colors group-hover:bg-blue-500/20 group-hover:text-blue-500',
+								{
+									'bg-blue-500 p-3 text-white group-hover:bg-blue-500 group-hover:text-white':
+										selected === 'single'
+								}
+							)}
 						>
 							<User />
 						</div>
@@ -85,12 +91,18 @@
 				</Card>
 
 				<Card
-					class={cn({ 'ring-2 ring-blue-500': selected === 'multi' }, 'transition-all')}
+					class={cn({ 'ring-2 ring-blue-500': selected === 'multi' }, 'group transition-all')}
 					onclick={() => handleChangeSelection('multi')}
 				>
 					<CardContent class="grid place-items-center">
 						<div
-							class="mb-5 grid size-14 place-items-center rounded-full bg-blue-500 p-3 text-white"
+							class={cn(
+								'mb-5 grid size-14 place-items-center rounded-full bg-neutral-800 transition-colors group-hover:bg-blue-500/20 group-hover:text-blue-500',
+								{
+									'bg-blue-500 p-3 text-white group-hover:bg-blue-500 group-hover:text-white':
+										selected === 'multi'
+								}
+							)}
 						>
 							<Users />
 						</div>

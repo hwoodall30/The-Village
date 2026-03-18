@@ -43,10 +43,6 @@
 				collaboration.</PageHeaderDescription
 			>
 			<div class="mt-8 grid w-full grid-cols-1 gap-2 lg:grid-cols-2">
-				<!-- <Button href="/events" class="bg-blue-500 text-sm text-white hover:bg-blue-700"
-					>See Events <Icon icon="lucide:calendar" />
-				</Button> -->
-
 				<Button href="/application" class="bg-blue-500 text-sm text-white hover:bg-blue-700"
 					>Fill Out Application <ArrowRight />
 				</Button>
