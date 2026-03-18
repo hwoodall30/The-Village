@@ -64,7 +64,7 @@
 
 			<p class="text-xl">How many children are you applying?</p>
 
-			<div class="mt-5 mb-5 grid w-full grid-cols-2 gap-5 md:gap-10">
+			<div class="mt-5 mb-5 grid w-full grid-cols-2 gap-5">
 				<Card
 					class={cn({ 'ring-2 ring-blue-500': selected === 'single' }, 'group transition-all')}
 					onclick={() => handleChangeSelection('single')}
@@ -72,7 +72,7 @@
 					<CardContent class="grid place-items-center">
 						<div
 							class={cn(
-								'mb-5  grid size-14 place-items-center rounded-full bg-neutral-800 transition-colors group-hover:bg-blue-500/20 group-hover:text-blue-500',
+								'mb-5 grid size-14 place-items-center rounded-full bg-neutral-800 transition-colors group-hover:bg-blue-500/20 group-hover:text-blue-500',
 								{
 									'bg-blue-500 p-3 text-white group-hover:bg-blue-500 group-hover:text-white':
 										selected === 'single'
