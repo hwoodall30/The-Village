@@ -1,13 +1,13 @@
 [
 	{
-		"name": "Jane Doe",
+		"name": "Kim Fuchs",
 		"position": "Director",
-		"image": "/staff/user.png",
-		"description": "We are excited to fill the role of Director very soon.",
+		"image": "/staff/Kim_Fuchs.png",
+		"description": "Kim graduated from Carson-Newman University and holds a Master’s degree in Curriculum and Instruction from Lincoln Memorial University. She brings more than 35 years of experience serving children and families through both education and ministry.",
 		"role": "Leadership"
 	},
 	{
-		"name": "John Doe",
+		"name": "Jane Doe",
 		"position": "Administrator",
 		"image": "/staff/user.png",
 		"description": "We are eager to fill the role of Administrator very soon.",

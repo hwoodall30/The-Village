@@ -47,11 +47,8 @@
 					>See Events <Icon icon="lucide:calendar" />
 				</Button> -->
 
-				<Button
-					href="https://schools.mybrightwheel.com/sign-in?redirect_path=/paperwork/sign-ups/b14f6369-7d2b-4078-a88a-7e2d7ffeb9ca/share"
-					target="_blank"
-					class="bg-blue-500 text-sm text-white hover:bg-blue-700"
-					>Register for our Interest Meeting <Icon icon="lucide:calendar" />
+				<Button href="/application" class="bg-blue-500 text-sm text-white hover:bg-blue-700"
+					>Fill out an application <ArrowRight />
 				</Button>
 
 				<Button
