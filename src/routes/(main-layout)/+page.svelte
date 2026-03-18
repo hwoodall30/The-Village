@@ -48,7 +48,7 @@
 				</Button> -->
 
 				<Button href="/application" class="bg-blue-500 text-sm text-white hover:bg-blue-700"
-					>Fill out an application <ArrowRight />
+					>Fill Out Application <ArrowRight />
 				</Button>
 
 				<Button
