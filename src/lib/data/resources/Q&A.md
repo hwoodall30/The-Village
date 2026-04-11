@@ -34,6 +34,10 @@ Teachers also remain available to answer questions and support families througho
 
 Village Collaborative will meet at Mt. Lebanon Baptist Church for the 2026–2027 school year.
 
+## What grades do you offer?
+
+We would like to excel in grades K-5th. If the Lord opens the door in the future for us to offer more grades, we will adjust accordingly.
+
 ## Who will be the Director?
 
 Kim Fuchs serves as the founding director of Village Collaborative. She provides academic leadership and oversees curriculum selection, teacher support and training, and family admissions.
