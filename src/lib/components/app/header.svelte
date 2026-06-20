@@ -104,7 +104,7 @@
 					onclick={() => (open = false)}
 					href={resolve(navItem.href)}
 					class={cn(
-						'border-b border-border pb-3 text-sm font-bold tracking-[0.1em] text-village-navy uppercase',
+						'border-b border-border pb-3 text-sm font-bold tracking-widest text-village-navy uppercase',
 						{ 'text-village-green': isActive(navItem.match) }
 					)}
 				>
