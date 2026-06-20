@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { buttonVariants } from '../ui/button';
+	import { BrandButton } from './brand';
 	import {
 		Dialog,
 		DialogContent,
@@ -10,7 +10,9 @@
 </script>
 
 <Dialog>
-	<DialogTrigger class={buttonVariants({ variant: 'outline' })}>Apply Now</DialogTrigger>
+	<DialogTrigger>
+		<BrandButton tone="outline">Apply Now</BrandButton>
+	</DialogTrigger>
 	<DialogContent class="max-w-[calc(100%-1rem)] px-2 pb-2">
 		<DialogHeader>
 			<DialogDescription>Please fill out the form below to apply.</DialogDescription>

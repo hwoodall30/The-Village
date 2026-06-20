@@ -1,10 +1,7 @@
 <script>
 	import Footer from '$lib/components/app/footer.svelte';
-	import PageHeaderDescription from '$lib/components/app/page-header/page-header-description.svelte';
-	import PageHeaderTitle from '$lib/components/app/page-header/page-header-title.svelte';
-	import PageHeaderWrapper from '$lib/components/app/page-header/page-header-wrapper.svelte';
-	import PageHeader from '$lib/components/app/page-header/page-header.svelte';
-	import { Button } from '$lib/components/ui/button';
+	import { BrandButton, BrandCard, BrandPageHeader, BrandSection } from '$lib/components/app/brand';
+	import { CardContent } from '$lib/components/ui/card';
 	import { Input } from '$lib/components/ui/input';
 	import { Label } from '$lib/components/ui/label';
 	import { Textarea } from '$lib/components/ui/textarea';
@@ -18,50 +15,67 @@
 	});
 </script>
 
-<main class="grid h-full grid-rows-[auto_auto_1fr]">
-	<PageHeaderWrapper>
-		<PageHeader>
-			<PageHeaderTitle class="text-center"
-				>Contact <span class="text-blue-500 [view-transition-name:page-header-title]">Us</span
-				></PageHeaderTitle
-			>
-			<PageHeaderDescription class="text-center"
-				>Please fill out this form below to contact us with any question or concerns and we will get
-				back to you as soon as possible.</PageHeaderDescription
-			>
-		</PageHeader>
-	</PageHeaderWrapper>
+<main class="grid min-h-full grid-rows-[auto_1fr_auto]">
+	<BrandPageHeader
+		eyebrow="Contact"
+		titleBefore="Contact "
+		titleAccent="Us"
+		description="Please fill out this form with any questions or concerns and we will get back to you as soon as possible."
+	/>
 
-	<div class="px-5 py-20">
-		<form action="https://formsubmit.co/hwoodall3002@gmail.com" method="POST">
-			<input type="hidden" name="_subject" value="Contact Us Form" />
+	<BrandSection>
+		<BrandCard class="mx-auto max-w-3xl">
+			<CardContent>
+				<form action="https://formsubmit.co/hwoodall3002@gmail.com" method="POST">
+					<input type="hidden" name="_subject" value="Contact Us Form" />
+					<input type="text" name="_honey" style="display:none" />
 
-			<input type="text" name="_honey" style="display:none" />
+					<div class="flex flex-col gap-5">
+						<div>
+							<Label class="mb-2 text-village-navy">Name</Label>
+							<Input
+								class="rounded-none bg-village-paper"
+								placeholder="Name"
+								bind:value={form.name}
+								name="name"
+							/>
+						</div>
+						<div>
+							<Label class="mb-2 text-village-navy">Email</Label>
+							<Input
+								class="rounded-none bg-village-paper"
+								placeholder="Email"
+								bind:value={form.email}
+								name="email"
+								type="email"
+							/>
+						</div>
+						<div>
+							<Label class="mb-2 text-village-navy">Phone</Label>
+							<Input
+								class="rounded-none bg-village-paper"
+								placeholder="Phone"
+								bind:value={form.phone}
+								name="phone"
+								type="tel"
+							/>
+						</div>
+						<div>
+							<Label class="mb-2 text-village-navy">Message</Label>
+							<Textarea
+								class="min-h-36 rounded-none bg-village-paper"
+								placeholder="Message"
+								bind:value={form.message}
+								name="message"
+							/>
+						</div>
 
-			<div class="mx-auto flex max-w-3xl flex-col gap-4">
-				<div>
-					<Label class="mb-1">Name</Label>
-					<Input placeholder="Name" bind:value={form.name} name="name" />
-				</div>
-				<div>
-					<Label class="mb-1">Email</Label>
-					<Input placeholder="Email" bind:value={form.email} name="email" type="email" />
-				</div>
-				<div>
-					<Label class="mb-1">Phone</Label>
-					<Input placeholder="Phone" bind:value={form.phone} name="phone" type="tel" />
-				</div>
-				<div>
-					<Label class="mb-1">Message</Label>
-					<Textarea placeholder="Message" bind:value={form.message} name="message" />
-				</div>
-
-				<Button type="submit" class="bg-blue-500 text-white hover:bg-blue-700"
-					>Submit <SendHorizontal /></Button
-				>
-			</div>
-		</form>
-	</div>
+						<BrandButton type="submit" class="w-full">Submit <SendHorizontal /></BrandButton>
+					</div>
+				</form>
+			</CardContent>
+		</BrandCard>
+	</BrandSection>
 
 	<Footer />
 </main>

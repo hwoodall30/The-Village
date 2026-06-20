@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './layout.css';
-	import { ModeWatcher } from 'mode-watcher';
 	import { onNavigate } from '$app/navigation';
+	import VillageIcon from '$lib/assets/icons/the-village-icon.svg';
 
 	let { children } = $props();
 
@@ -20,10 +20,8 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href="/icons/the-village-icon.svg" />
+	<link rel="icon" href={VillageIcon} />
 	<title>The Village</title>
 </svelte:head>
-
-<ModeWatcher />
 
 {@render children?.()}

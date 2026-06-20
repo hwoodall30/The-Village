@@ -9,9 +9,9 @@
 <main class="grid min-h-full grid-rows-[auto_1fr_auto]">
 	<BrandPageHeader
 		eyebrow="For Parents"
-		titleBefore="School "
-		titleAccent="Resources"
-		description="Stay connected with practical resources, important documents, and updates for Village families."
+		titleBefore="Partnering With "
+		titleAccent="Families"
+		description="Helpful resources, admissions information, and parent-facing updates for families walking with The Village Collaborative."
 	/>
 
 	<BrandSection>

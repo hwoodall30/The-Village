@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Footer from '$lib/components/app/footer.svelte';
 	import { BrandCard, BrandPageHeader, BrandSection } from '$lib/components/app/brand';
 	import { CardDescription, CardHeader, CardTitle } from '$lib/components/ui/card';
@@ -8,13 +8,21 @@
 <main>
 	<BrandPageHeader
 		eyebrow="Community"
-		titleBefore="All "
-		titleAccent="Staff"
-		description="Meet our talented staff."
+		titleBefore="Known. Loved. "
+		titleAccent="Walking Together."
+		description="The Village Collaborative is built around partnership: parents, students, and staff learning and growing in a close Christ-centered community."
 	/>
 
 	<BrandSection>
-		<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+		<div class="mx-auto max-w-4xl text-center">
+			<h2 class="font-display text-4xl text-village-navy">Our Community</h2>
+			<p class="mt-4 text-lg leading-8 text-muted-foreground">
+				Small community is one of the ways we help families homeschool with confidence and children
+				grow with support.
+			</p>
+		</div>
+
+		<div class="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-2">
 			{#each staff as s (s.name)}
 				<BrandCard class="row-span-4 grid h-full grid-rows-subgrid p-6">
 					<CardHeader class="contents">
