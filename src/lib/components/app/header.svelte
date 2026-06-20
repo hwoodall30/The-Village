@@ -4,7 +4,7 @@
 		{ name: 'About', href: '/about', match: ['/about'] },
 		{ name: 'Our Approach', href: '/our-approach', match: ['/our-approach', '/programs'] },
 		{ name: 'Parents', href: '/parents', match: ['/parents', '/resources'] },
-		{ name: 'Community', href: '/community', match: ['/community', '/all-staff'] },
+		// { name: 'Community', href: '/community', match: ['/community', '/all-staff'] },
 		{ name: 'Events', href: '/events', match: ['/events'] },
 		{ name: 'Contact', href: '/contact', match: ['/contact'] }
 	] as const;
