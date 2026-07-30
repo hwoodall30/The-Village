@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeroImage from '$lib/assets/home/home-hero.png';
+	import HeroImage from '$lib/assets/home/home-hero.webp';
 	import { SITE_NAME, SITE_URL } from '$lib/config/seo';
 
 	let {

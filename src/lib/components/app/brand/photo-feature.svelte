@@ -43,6 +43,8 @@
 		<img
 			src={image}
 			{alt}
+			loading="lazy"
+			decoding="async"
 			class="aspect-4/3 w-full rounded-t-[45%] object-cover shadow-[0_18px_60px_rgb(8_33_59/0.18)]"
 		/>
 		{#if badge}

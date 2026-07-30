@@ -6,7 +6,13 @@
 </script>
 
 <section class="relative overflow-hidden bg-village-navy px-5 py-8 text-primary-foreground">
-	<img src={image} alt="" class="absolute inset-0 h-full w-full object-cover opacity-25" />
+	<img
+		src={image}
+		alt=""
+		loading="lazy"
+		decoding="async"
+		class="absolute inset-0 h-full w-full object-cover opacity-25"
+	/>
 	<div class="absolute inset-0 bg-village-navy/75"></div>
 	<div
 		class="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 text-center lg:flex-row lg:text-left"

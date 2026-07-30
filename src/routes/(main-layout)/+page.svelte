@@ -55,15 +55,14 @@
 		PhotoFeature,
 		PillarGrid
 	} from '$lib/components/app/brand';
-	import HeroImage from '$lib/assets/home/home-hero.png';
-	import CommunityImage from '$lib/assets/home/home-community.png';
-	import CtaImage from '$lib/assets/home/home-cta.png';
+	import HeroImage from '$lib/assets/home/home-hero.webp';
+	import CommunityImage from '$lib/assets/home/home-community.webp';
+	import CtaImage from '$lib/assets/home/home-cta.webp';
 	import Icon from '@iconify/svelte';
 </script>
 
 <svelte:head>
-	<link rel="preload" as="image" href={HeroImage} fetchpriority="high" />
-	<link rel="preload" as="image" href={CommunityImage} />
+	<link rel="preload" as="image" href={HeroImage} type="image/webp" fetchpriority="high" />
 </svelte:head>
 
 <main>
