@@ -70,7 +70,7 @@
 				</a>
 				<a
 					aria-label="Email"
-					href="mailto:help@village-collab.org"
+					href="mailto:villagecommunitycollab@gmail.com"
 					class="grid size-9 place-items-center rounded-full bg-village-green text-primary-foreground"
 				>
 					<Icon icon="lucide:mail" class="size-4" />

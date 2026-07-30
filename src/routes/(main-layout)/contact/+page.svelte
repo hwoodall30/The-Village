@@ -19,11 +19,14 @@
 				<Mail class="mb-5 size-10 text-village-green" />
 				<p class="mb-5 text-muted-foreground">
 					Click below to open your email app and write to
-					<a class="font-medium text-village-navy underline" href="mailto:help@village-collab.org">
-						help@village-collab.org
+					<a
+						class="font-medium text-village-navy underline"
+						href="mailto:villagecommunitycollab@gmail.com"
+					>
+						villagecommunitycollab@gmail.com
 					</a>.
 				</p>
-				<BrandButton href="mailto:help@village-collab.org" class="w-full">
+				<BrandButton href="mailto:villagecommunitycollab@gmail.com" class="w-full">
 					Email Us <Mail />
 				</BrandButton>
 			</CardContent>

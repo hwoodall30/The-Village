@@ -1,6 +1,6 @@
 export const SITE_NAME = 'The Village Collaborative';
 export const SITE_URL = 'https://www.village-collab.org';
-export const CONTACT_EMAIL = 'help@village-collab.org';
+export const CONTACT_EMAIL = 'villagecommunitycollab@gmail.com';
 export const FACEBOOK_URL =
 	'https://www.facebook.com/people/The-Village-Collaborative/61585969575739/';
 
