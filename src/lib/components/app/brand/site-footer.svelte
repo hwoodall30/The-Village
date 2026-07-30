@@ -6,18 +6,17 @@
 	const quickLinks = [
 		{ label: 'About', href: '/about' },
 		{ label: 'Our Approach', href: '/our-approach' },
-		{ label: 'Parents', href: '/parents' },
+		{ label: 'Programs', href: '/programs' },
 		{ label: 'Community', href: '/community' },
-		{ label: 'Events', href: '/events' },
+		{ label: 'Careers', href: '/careers' },
 		{ label: 'Contact', href: '/contact' }
 	] as const;
 
 	const parentLinks = [
-		{ label: 'Admissions', href: '/application' },
-		{ label: 'FAQs', href: '/parents' },
-		{ label: 'Tuition & Fees', href: '/parents' },
-		{ label: 'Calendar', href: '/events' },
-		{ label: 'Parent Resources', href: '/parents' }
+		{ label: 'Apply', href: '/application' },
+		{ label: 'Parent Information', href: '/parents' },
+		{ label: 'Events', href: '/events' },
+		{ label: 'Resources', href: '/resources' }
 	] as const;
 </script>
 
@@ -45,7 +44,7 @@
 				For Parents
 			</h3>
 			<ul class="space-y-1 text-sm">
-				{#each parentLinks as link (link.href + link.label)}
+				{#each parentLinks as link (link.href)}
 					<li>
 						<a href={resolve(link.href)} class="hover:text-village-green">{link.label}</a>
 					</li>
@@ -70,15 +69,8 @@
 					<Icon icon="lucide:facebook" class="size-4" />
 				</a>
 				<a
-					aria-label="Instagram"
-					href={resolve('/contact')}
-					class="grid size-9 place-items-center rounded-full bg-village-green text-primary-foreground"
-				>
-					<Icon icon="lucide:instagram" class="size-4" />
-				</a>
-				<a
 					aria-label="Email"
-					href="mailto:villagecommunitycollab@gmail.com"
+					href="mailto:help@village-collab.org"
 					class="grid size-9 place-items-center rounded-full bg-village-green text-primary-foreground"
 				>
 					<Icon icon="lucide:mail" class="size-4" />
