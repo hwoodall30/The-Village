@@ -61,11 +61,6 @@ export const pageSeo = {
 		description:
 			'Find admissions information, updates, and helpful guidance for families at The Village Collaborative.'
 	},
-	'/privacy-policy': {
-		title: 'Privacy Policy | The Village Collaborative',
-		description: 'Read the privacy policy for The Village Collaborative.',
-		noindex: true
-	},
 	'/programs': {
 		title: 'Programs | The Village Collaborative',
 		description:
@@ -75,10 +70,5 @@ export const pageSeo = {
 		title: 'Family Resources | The Village Collaborative',
 		description:
 			'Explore practical documents, schedules, answers, and updates for Village families.'
-	},
-	'/terms': {
-		title: 'Terms of Use | The Village Collaborative',
-		description: 'Read the website terms of use for The Village Collaborative.',
-		noindex: true
 	}
 } satisfies Record<string, PageSeo>;

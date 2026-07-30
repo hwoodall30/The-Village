@@ -80,12 +80,8 @@
 	</div>
 
 	<div class="bg-village-green py-3 text-primary-foreground">
-		<div class="brand-container flex flex-col justify-between gap-2 text-xs md:flex-row">
-			<p>© 2024 The Village Collaborative. All Rights Reserved.</p>
-			<div class="flex gap-5">
-				<a href={resolve('/privacy-policy')} class="hover:underline">Privacy Policy</a>
-				<a href={resolve('/terms')} class="hover:underline">Terms of Use</a>
-			</div>
+		<div class="brand-container grid place-items-center text-xs">
+			<p>© {new Date().getFullYear()} The Village Collaborative. All Rights Reserved.</p>
 		</div>
 	</div>
 </footer>
