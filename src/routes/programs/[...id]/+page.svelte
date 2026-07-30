@@ -3,6 +3,7 @@
 	import { resolve } from '$app/paths';
 	import Footer from '$lib/components/app/footer.svelte';
 	import Header from '$lib/components/app/header.svelte';
+	import SeoHead from '$lib/components/app/seo-head.svelte';
 	import { BrandButton } from '$lib/components/app/brand';
 	import { ArrowLeft } from '@lucide/svelte';
 
@@ -11,9 +12,12 @@
 	let content = $derived(data.content);
 </script>
 
-<svelte:head>
-	<title>{metadata.title}</title>
-</svelte:head>
+<SeoHead
+	title={`${metadata.title} Program | The Village Collaborative`}
+	description={metadata.description}
+	pathname={`/programs/${metadata.id}`}
+	noindex
+/>
 
 <main class="grid min-h-full grid-rows-[auto_1fr_auto]">
 	<Header />

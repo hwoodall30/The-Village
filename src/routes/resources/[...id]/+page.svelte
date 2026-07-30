@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation';
 	import Footer from '$lib/components/app/footer.svelte';
 	import Header from '$lib/components/app/header.svelte';
+	import SeoHead from '$lib/components/app/seo-head.svelte';
 	import { BrandButton } from '$lib/components/app/brand';
 	import { ArrowLeft } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
@@ -9,9 +10,12 @@
 	let { data } = $props();
 </script>
 
-<svelte:head>
-	<title>{data?.metadata?.title}</title>
-</svelte:head>
+<SeoHead
+	title={`${data.metadata.title} | The Village Collaborative`}
+	description={data.metadata.description}
+	pathname={`/resources/${data.metadata.id}`}
+	type="article"
+/>
 
 <main class="grid min-h-full grid-rows-[auto_1fr_auto]">
 	<Header />

@@ -1,3 +1,5 @@
+import { error } from '@sveltejs/kit';
+
 export const load = async ({ params }) => {
 	try {
 		const post = await import(`../../../lib/data/resources/${params.id}.md`);
@@ -6,9 +8,6 @@ export const load = async ({ params }) => {
 			metadata: post.metadata
 		};
 	} catch {
-		return {
-			content: 'Not found',
-			metadata: {}
-		};
+		error(404, 'Resource not found');
 	}
 };

@@ -1,3 +1,5 @@
+import { error } from '@sveltejs/kit';
+
 export const load = async ({ params }) => {
 	try {
 		const program = await import(`../../../lib/data/programs/${params.id}.md`);
@@ -6,9 +8,6 @@ export const load = async ({ params }) => {
 			metadata: program.metadata
 		};
 	} catch {
-		return {
-			content: 'Not found',
-			metadata: {}
-		};
+		error(404, 'Program not found');
 	}
 };
