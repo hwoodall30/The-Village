@@ -1,13 +1,8 @@
 <script lang="ts">
-	import PageHeaderDescription from '$lib/components/app/page-header/page-header-description.svelte';
-	import PageHeaderTitle from '$lib/components/app/page-header/page-header-title.svelte';
-	import PageHeaderWrapper from '$lib/components/app/page-header/page-header-wrapper.svelte';
-	import PageHeader from '$lib/components/app/page-header/page-header.svelte';
 	import Footer from '$lib/components/app/footer.svelte';
 	import { Alert } from '$lib/components/ui/alert';
-	import AlertTitle from '$lib/components/ui/alert/alert-title.svelte';
+	import AlertDescription from '$lib/components/ui/alert/alert-description.svelte';
 	import {
-		Card,
 		CardContent,
 		CardDescription,
 		CardFooter,
@@ -16,10 +11,9 @@
 	} from '$lib/components/ui/card';
 	import { CircleAlert, CircleCheck, ExternalLink, User, Users } from '@lucide/svelte';
 	import { cn } from '$lib/utils';
-	import { Button } from '$lib/components/ui/button';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import AlertDescription from '$lib/components/ui/alert/alert-description.svelte';
+	import { BrandButton, BrandCard, BrandPageHeader, BrandSection } from '$lib/components/app/brand';
 
 	let selected = $state<'single' | 'multi'>('single');
 	let isStepOneComplete = $state(false);
@@ -38,91 +32,95 @@
 	});
 </script>
 
-<main class="grid h-full grid-rows-[auto_auto_1fr]">
-	<PageHeaderWrapper>
-		<PageHeader>
-			<PageHeaderTitle class="text-center">
-				<span class="text-blue-500 [view-transition-name:page-header-title]">Application</span> Instructions
-			</PageHeaderTitle>
-			<PageHeaderDescription class="text-center">
-				Please follow the option that best fits your family.
-			</PageHeaderDescription>
-		</PageHeader>
-	</PageHeaderWrapper>
+<main class="grid min-h-full grid-rows-[auto_1fr_auto]">
+	<BrandPageHeader
+		eyebrow="Admissions"
+		titleAccent="Application"
+		titleAfter=" Instructions"
+		description="Please follow the option that best fits your family."
+	/>
 
-	<div class="px-5 py-20">
+	<BrandSection>
 		<div class="mx-auto grid max-w-2xl place-items-center">
-			<Alert
-				class="mb-10 border-orange-500/30 bg-orange-500/10 text-orange-500 dark:text-orange-500"
-			>
+			<Alert class="mb-10 rounded-none border-village-gold/40 bg-village-gold/10 text-village-navy">
 				<CircleAlert />
-				<AlertDescription class="text-orange-500"
+				<AlertDescription class="text-village-navy"
 					>Reminder: There is a $100 application fee per family. Following the correct instructions
 					below ensures your family is only charged once.</AlertDescription
 				>
 			</Alert>
 
-			<p class="text-xl">How many children are you applying?</p>
+			<p class="font-display text-2xl text-village-navy">How many children are you applying?</p>
 
-			<div class="mt-5 mb-5 grid w-full grid-cols-2 gap-5">
-				<Card
-					class={cn({ 'ring-2 ring-blue-500': selected === 'single' }, 'group transition-all')}
+			<div class="mt-5 mb-5 grid w-full grid-cols-1 gap-5 sm:grid-cols-2">
+				<BrandCard
+					class={cn('group cursor-pointer transition-all', {
+						'ring-2 ring-village-green': selected === 'single'
+					})}
 					onclick={() => handleChangeSelection('single')}
 				>
 					<CardContent class="grid place-items-center">
 						<div
 							class={cn(
-								'mb-5 grid size-14 place-items-center rounded-full bg-neutral-800 transition-colors group-hover:bg-blue-500/20 group-hover:text-blue-500',
+								'mb-5 grid size-14 place-items-center rounded-full bg-village-sage text-village-green transition-colors group-hover:bg-village-green group-hover:text-primary-foreground',
 								{
-									'bg-blue-500 p-3 text-white group-hover:bg-blue-500 group-hover:text-white':
-										selected === 'single'
+									'bg-village-green p-3 text-primary-foreground': selected === 'single'
 								}
 							)}
 						>
 							<User />
 						</div>
 
-						<p class="text-center text-sm font-semibold md:text-xl">One Child</p>
+						<p
+							class="text-center text-sm font-bold tracking-[0.08em] text-village-navy uppercase md:text-base"
+						>
+							One Child
+						</p>
 
 						<p class="mt-2 text-center text-xs text-muted-foreground">
 							Single child application process
 						</p>
 					</CardContent>
-				</Card>
+				</BrandCard>
 
-				<Card
-					class={cn({ 'ring-2 ring-blue-500': selected === 'multi' }, 'group transition-all')}
+				<BrandCard
+					class={cn('group cursor-pointer transition-all', {
+						'ring-2 ring-village-green': selected === 'multi'
+					})}
 					onclick={() => handleChangeSelection('multi')}
 				>
 					<CardContent class="grid place-items-center">
 						<div
 							class={cn(
-								'mb-5 grid size-14 place-items-center rounded-full bg-neutral-800 transition-colors group-hover:bg-blue-500/20 group-hover:text-blue-500',
+								'mb-5 grid size-14 place-items-center rounded-full bg-village-sage text-village-green transition-colors group-hover:bg-village-green group-hover:text-primary-foreground',
 								{
-									'bg-blue-500 p-3 text-white group-hover:bg-blue-500 group-hover:text-white':
-										selected === 'multi'
+									'bg-village-green p-3 text-primary-foreground': selected === 'multi'
 								}
 							)}
 						>
 							<Users />
 						</div>
 
-						<p class="text-center text-sm font-semibold md:text-xl">Two or More Children</p>
+						<p
+							class="text-center text-sm font-bold tracking-[0.08em] text-village-navy uppercase md:text-base"
+						>
+							Two or More Children
+						</p>
 
 						<p class="mt-2 text-center text-xs text-muted-foreground">
 							Multi-child application steps
 						</p>
 					</CardContent>
-				</Card>
+				</BrandCard>
 			</div>
 
 			<div class="w-full">
 				{#if selected === 'single'}
 					<div in:fly={{ y: 20 }}>
-						<Card>
+						<BrandCard>
 							<CardHeader>
-								<CardTitle class="flex items-center gap-2"
-									><CircleCheck class="size-5 text-emerald-500" /> Applying One Child</CardTitle
+								<CardTitle class="font-display flex items-center gap-2 text-2xl text-village-navy"
+									><CircleCheck class="size-5 text-village-green" /> Applying One Child</CardTitle
 								>
 								<CardDescription
 									>Click the button below to open the application form. Complete all required fields
@@ -131,21 +129,20 @@
 							</CardHeader>
 
 							<CardContent>
-								<Button
+								<BrandButton
 									href="https://schools.mybrightwheel.com/sign-in?redirect_path=/admissions/packet/a90573c0-3ee4-4c60-bdf8-00a2e7f53a37/fill?school_id=3ac671b7-8fa7-4426-a881-cea74913544c"
 									target="_blank"
-									class="w-full bg-blue-500 text-white hover:bg-blue-600 dark:hover:bg-blue-600 "
-									>Start Application <ExternalLink /></Button
+									class="w-full">Start Application <ExternalLink /></BrandButton
 								>
 							</CardContent>
-						</Card>
+						</BrandCard>
 					</div>
 				{:else}
 					<div in:fly={{ y: 20 }}>
-						<Card>
+						<BrandCard>
 							<CardHeader>
-								<CardTitle class="flex items-center gap-2"
-									><CircleCheck class="size-5 text-emerald-500" /> Applying Two or More Children</CardTitle
+								<CardTitle class="font-display flex items-center gap-2 text-2xl text-village-navy"
+									><CircleCheck class="size-5 text-village-green" /> Applying Two or More Children</CardTitle
 								>
 								<CardDescription
 									>Follow these steps in order to ensure your family is charged only one application
@@ -154,11 +151,13 @@
 							</CardHeader>
 
 							<CardContent class="px-2">
-								<Card>
-									<CardHeader>
-										<CardTitle class="flex items-center gap-2">
+								<div class="border border-border bg-village-paper p-6">
+									<div>
+										<CardTitle
+											class="font-display flex items-center gap-2 text-xl text-village-navy"
+										>
 											<div
-												class="grid size-8 place-items-center rounded-full bg-neutral-100 font-semibold dark:bg-neutral-800"
+												class="grid size-8 place-items-center rounded-full bg-village-sage font-semibold text-village-green"
 											>
 												1
 											</div>
@@ -167,24 +166,29 @@
 										<CardDescription
 											>Complete the full application for your first child using the link below.</CardDescription
 										>
-									</CardHeader>
+									</div>
 
-									<CardContent class="px-2">
-										<Button
+									<div class="mt-5">
+										<BrandButton
 											onclick={setStepOneComplete}
 											href="https://schools.mybrightwheel.com/sign-in?redirect_path=/admissions/packet/a90573c0-3ee4-4c60-bdf8-00a2e7f53a37/fill?school_id=3ac671b7-8fa7-4426-a881-cea74913544c"
 											target="_blank"
-											class="w-full bg-blue-500 text-white hover:bg-blue-600 dark:hover:bg-blue-600 "
-											>First Child Application <ExternalLink /></Button
+											class="w-full">First Child Application <ExternalLink /></BrandButton
 										>
-									</CardContent>
-								</Card>
+									</div>
+								</div>
 
-								<Card class={cn('mt-3', { 'pointer-events-none opacity-30': !isStepOneComplete })}>
-									<CardHeader>
-										<CardTitle class="flex items-center gap-2">
+								<div
+									class={cn('mt-3 border border-border bg-village-paper p-6', {
+										'pointer-events-none opacity-30': !isStepOneComplete
+									})}
+								>
+									<div>
+										<CardTitle
+											class="font-display flex items-center gap-2 text-xl text-village-navy"
+										>
 											<div
-												class="grid size-8 place-items-center rounded-full bg-neutral-100 font-semibold dark:bg-neutral-800"
+												class="grid size-8 place-items-center rounded-full bg-village-sage font-semibold text-village-green"
 											>
 												2
 											</div>
@@ -195,21 +199,20 @@
 											without paying additional fees. You will have to complete this for each
 											remaining child.</CardDescription
 										>
-									</CardHeader>
+									</div>
 
-									<CardContent class="px-2">
-										<Button
+									<div class="mt-5">
+										<BrandButton
 											href="https://schools.mybrightwheel.com/sign-in?redirect_path=/admissions/packet/674b7ff6-7427-4282-8e08-5f9a8ce35147/fill?school_id=3ac671b7-8fa7-4426-a881-cea74913544c"
 											target="_blank"
-											class="w-full bg-blue-500 text-white hover:bg-blue-600 dark:hover:bg-blue-600 "
-											>Remaining Children Application <ExternalLink /></Button
+											class="w-full">Remaining Children Application <ExternalLink /></BrandButton
 										>
-									</CardContent>
-								</Card>
+									</div>
+								</div>
 							</CardContent>
 
 							<CardFooter class="px-2">
-								<Alert>
+								<Alert class="rounded-none">
 									<CircleAlert />
 									<AlertDescription
 										>Important: You must complete the first application before starting the second.
@@ -217,12 +220,12 @@
 									>
 								</Alert>
 							</CardFooter>
-						</Card>
+						</BrandCard>
 					</div>
 				{/if}
 			</div>
 		</div>
-	</div>
+	</BrandSection>
 
 	<Footer />
 </main>

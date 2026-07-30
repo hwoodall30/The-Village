@@ -3,7 +3,8 @@
 	import { resolve } from '$app/paths';
 	import Footer from '$lib/components/app/footer.svelte';
 	import Header from '$lib/components/app/header.svelte';
-	import { Button } from '$lib/components/ui/button';
+	import SeoHead from '$lib/components/app/seo-head.svelte';
+	import { BrandButton } from '$lib/components/app/brand';
 	import { ArrowLeft } from '@lucide/svelte';
 
 	let { data } = $props();
@@ -11,16 +12,21 @@
 	let content = $derived(data.content);
 </script>
 
-<svelte:head>
-	<title>{metadata.title}</title>
-</svelte:head>
+<SeoHead
+	title={`${metadata.title} Program | The Village Collaborative`}
+	description={metadata.description}
+	pathname={`/programs/${metadata.id}`}
+	noindex
+/>
 
 <main class="grid min-h-full grid-rows-[auto_1fr_auto]">
 	<Header />
 
-	<article class="mx-auto prose h-full w-full max-w-7xl p-5 py-20 dark:prose-invert">
-		<Button class="my-8" onclick={() => goto(resolve('/programs'))}
-			><ArrowLeft /> Back to Programs</Button
+	<article
+		class="prose-headings:font-display mx-auto prose h-full w-full max-w-5xl p-5 py-20 prose-slate prose-headings:text-village-navy prose-a:text-village-green"
+	>
+		<BrandButton class="my-8" onclick={() => goto(resolve('/our-approach'))}
+			><ArrowLeft /> Back to Programs</BrandButton
 		>
 		{#if typeof content === 'function'}
 			{@render content?.()}

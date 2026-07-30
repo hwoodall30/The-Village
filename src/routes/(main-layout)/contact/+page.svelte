@@ -1,67 +1,34 @@
 <script>
 	import Footer from '$lib/components/app/footer.svelte';
-	import PageHeaderDescription from '$lib/components/app/page-header/page-header-description.svelte';
-	import PageHeaderTitle from '$lib/components/app/page-header/page-header-title.svelte';
-	import PageHeaderWrapper from '$lib/components/app/page-header/page-header-wrapper.svelte';
-	import PageHeader from '$lib/components/app/page-header/page-header.svelte';
-	import { Button } from '$lib/components/ui/button';
-	import { Input } from '$lib/components/ui/input';
-	import { Label } from '$lib/components/ui/label';
-	import { Textarea } from '$lib/components/ui/textarea';
-	import { SendHorizontal } from '@lucide/svelte';
-
-	let form = $state({
-		name: '',
-		email: '',
-		phone: '',
-		message: ''
-	});
+	import { BrandButton, BrandCard, BrandPageHeader, BrandSection } from '$lib/components/app/brand';
+	import { CardContent } from '$lib/components/ui/card';
+	import { Mail } from '@lucide/svelte';
 </script>
 
-<main class="grid h-full grid-rows-[auto_auto_1fr]">
-	<PageHeaderWrapper>
-		<PageHeader>
-			<PageHeaderTitle class="text-center"
-				>Contact <span class="text-blue-500 [view-transition-name:page-header-title]">Us</span
-				></PageHeaderTitle
-			>
-			<PageHeaderDescription class="text-center"
-				>Please fill out this form below to contact us with any question or concerns and we will get
-				back to you as soon as possible.</PageHeaderDescription
-			>
-		</PageHeader>
-	</PageHeaderWrapper>
+<main class="grid min-h-full grid-rows-[auto_1fr_auto]">
+	<BrandPageHeader
+		eyebrow="Contact"
+		titleBefore="Contact "
+		titleAccent="Us"
+		description="Have a question or concern? Send us an email and we will get back to you as soon as possible."
+	/>
 
-	<div class="px-5 py-20">
-		<form action="https://formsubmit.co/hwoodall3002@gmail.com" method="POST">
-			<input type="hidden" name="_subject" value="Contact Us Form" />
-
-			<input type="text" name="_honey" style="display:none" />
-
-			<div class="mx-auto flex max-w-3xl flex-col gap-4">
-				<div>
-					<Label class="mb-1">Name</Label>
-					<Input placeholder="Name" bind:value={form.name} name="name" />
-				</div>
-				<div>
-					<Label class="mb-1">Email</Label>
-					<Input placeholder="Email" bind:value={form.email} name="email" type="email" />
-				</div>
-				<div>
-					<Label class="mb-1">Phone</Label>
-					<Input placeholder="Phone" bind:value={form.phone} name="phone" type="tel" />
-				</div>
-				<div>
-					<Label class="mb-1">Message</Label>
-					<Textarea placeholder="Message" bind:value={form.message} name="message" />
-				</div>
-
-				<Button type="submit" class="bg-blue-500 text-white hover:bg-blue-700"
-					>Submit <SendHorizontal /></Button
-				>
-			</div>
-		</form>
-	</div>
+	<BrandSection>
+		<BrandCard class="mx-auto max-w-3xl">
+			<CardContent class="flex flex-col items-center text-center">
+				<Mail class="mb-5 size-10 text-village-green" />
+				<p class="mb-5 text-muted-foreground">
+					Click below to open your email app and write to
+					<a class="font-medium text-village-navy underline" href="mailto:help@village-collab.org">
+						help@village-collab.org
+					</a>.
+				</p>
+				<BrandButton href="mailto:help@village-collab.org" class="w-full">
+					Email Us <Mail />
+				</BrandButton>
+			</CardContent>
+		</BrandCard>
+	</BrandSection>
 
 	<Footer />
 </main>

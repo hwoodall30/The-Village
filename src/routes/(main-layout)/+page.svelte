@@ -1,87 +1,139 @@
+<script lang="ts" module>
+	const valuePillars = [
+		{
+			title: 'Christ-Centered',
+			description: 'Christ is at the heart of everything we do.',
+			icon: 'ph:cross-bold'
+		},
+		{
+			title: 'Family-Focused',
+			description: 'Parents are our partners. We walk together.',
+			icon: 'mdi:family'
+		},
+		{
+			title: 'Academically Excellent',
+			description: 'Rigorous learning that develops the whole child.',
+			icon: 'lucide:book-open'
+		},
+		{
+			title: 'Eternity-Minded',
+			description: 'Preparing children not just for this life, but for the next.',
+			icon: 'proicons:globe'
+		}
+	];
+
+	const approachPillars = [
+		{
+			title: 'Whole Child Education',
+			description: 'Nurturing spiritual, academic, emotional, and physical growth in every season.',
+			icon: 'lucide:sprout'
+		},
+		{
+			title: 'Small Community',
+			description: 'A close-knit environment where every child is known, loved, and valued.',
+			icon: 'lucide:hand-heart'
+		},
+		{
+			title: 'Real-World Learning',
+			description: 'Learning that is meaningful, practical, and connected to the world around us.',
+			icon: 'lucide:mountain'
+		},
+		{
+			title: 'Purposeful Preparation',
+			description: 'Equipping students to lead with wisdom, humility, and a Kingdom perspective.',
+			icon: 'lucide:compass'
+		}
+	];
+</script>
+
 <script lang="ts">
 	import Footer from '$lib/components/app/footer.svelte';
-	import PageHeaderDescription from '$lib/components/app/page-header/page-header-description.svelte';
-	import PageHeaderImage from '$lib/components/app/page-header/page-header-image.svelte';
-	import PageHeaderTitle from '$lib/components/app/page-header/page-header-title.svelte';
-	import PageHeaderWrapper from '$lib/components/app/page-header/page-header-wrapper.svelte';
-	import PageHeader from '$lib/components/app/page-header/page-header.svelte';
-	import { Button } from '$lib/components/ui/button';
+	import {
+		BrandButton,
+		BrandSection,
+		CtaBand,
+		PhotoFeature,
+		PillarGrid
+	} from '$lib/components/app/brand';
+	import HeroImage from '$lib/assets/home/home-hero.webp';
+	import CommunityImage from '$lib/assets/home/home-community.webp';
+	import CtaImage from '$lib/assets/home/home-cta.webp';
 	import Icon from '@iconify/svelte';
-	import { ArrowRight } from '@lucide/svelte';
-	import HeroImage from '$lib/assets/header-image.webp';
-	import VillageLogo from '$lib/assets/icons/the-village-logo.svg';
 </script>
 
 <svelte:head>
-	<link rel="preload" as="image" href={HeroImage} fetchpriority="high" />
-	<link rel="preload" as="image" href={VillageLogo} fetchpriority="high" />
+	<link rel="preload" as="image" href={HeroImage} type="image/webp" fetchpriority="high" />
 </svelte:head>
 
-<main class="grid h-full grid-rows-[auto_auto_1fr]">
-	<PageHeaderWrapper class="bg-transparent">
-		<PageHeaderImage src={HeroImage} />
-		<PageHeader class="grid grid-rows-[auto_1fr] gap-10 lg:grid-rows-1">
-			<div class="grid place-items-center">
-				<img
-					loading="eager"
-					fetchpriority="high"
-					class="mb-10 max-w-120 rounded-md p-5 invert dark:invert-0"
-					src={VillageLogo}
-					alt="Hero"
-				/>
+<main>
+	<section
+		class="relative min-h-130 overflow-hidden bg-village-navy text-primary-foreground lg:min-h-162.5"
+	>
+		<img
+			loading="eager"
+			fetchpriority="high"
+			src={HeroImage}
+			alt="Children walking toward a chapel-style schoolhouse"
+			class="absolute inset-0 h-full w-full object-cover"
+		/>
+		<div
+			class="absolute inset-0 bg-linear-to-r from-village-navy/90 via-village-navy/45 to-village-navy/10"
+		></div>
+		<div class="brand-container relative flex min-h-130 items-center py-20 lg:min-h-162.5">
+			<div class="max-w-2xl">
+				<h1 class="font-display text-5xl leading-tight text-balance text-white lg:text-7xl">
+					Educating for Life.<br />Living for Eternity.
+				</h1>
+				<p class="mt-6 max-w-xl text-xl leading-8 text-white/90">
+					A Christ-centered learning community where children are known, nurtured, and equipped for
+					a life of purpose.
+				</p>
+				<div class="mt-9 flex flex-col gap-4 sm:flex-row">
+					<BrandButton href="/about">Learn Our Story</BrandButton>
+					<BrandButton href="/contact" tone="light">Schedule a Visit</BrandButton>
+				</div>
 			</div>
-			<PageHeaderTitle class="text-center text-white text-shadow-neutral-700 text-shadow-xs">
-				Welcome to <span class="text-blue-500 [view-transition-name:page-header-title]"
-					>The Village</span
-				> Homeschool Collaborative</PageHeaderTitle
-			>
-			<PageHeaderDescription
-				class="text-center text-neutral-100 text-shadow-neutral-700 text-shadow-xs dark:text-neutral-300"
-			>
-				Our vision is to create a Christ-centered educational community where families are empowered
-				and learning blends the best of homeschool and traditional school with flexibility and
-				collaboration.</PageHeaderDescription
-			>
-			<div class="mt-8 grid w-full grid-cols-1 gap-2 lg:grid-cols-2">
-				<Button href="/application" class="bg-blue-500 text-sm text-white hover:bg-blue-700"
-					>Fill Out Application <ArrowRight />
-				</Button>
-
-				<Button
-					href="/resources"
-					variant="outline"
-					class="dark:hover-text-blue-500 border-blue-600/20 text-sm text-blue-500 backdrop-blur-sm hover:text-blue-700 dark:border-blue-500/20 dark:text-blue-500"
-					>See Resources <ArrowRight /></Button
-				>
-			</div>
-		</PageHeader>
-	</PageHeaderWrapper>
-
-	<div class="bg-background px-5 py-20">
-		<div class="mx-auto grid max-w-7xl">
-			<h2 class="text-center text-4xl font-semibold">Our Mission</h2>
-			<div class="text-center text-xl leading-relaxed text-muted-foreground">
-				We equip families to homeschool with confidence by providing tailored learning, enrichment
-				opportunities, and a strong community - so children thrive and parents have margin to
-				succeed.
-			</div>
-
-			<!-- <ul class="mt-8 grid grid-cols-3 justify-items-center">
-				{#each stats as stat (stat.name)}
-					<li class="flex flex-col items-center">
-						<div
-							class="mb-2 grid h-14 w-14 place-items-center rounded-md border shadow"
-							style="background: {stat.background}50; border-color: {stat.background}"
-						>
-							<Icon icon={stat.icon} class="h-6 w-6" style="color: {stat.background}" />
-						</div>
-						<div class="my-1 text-2xl">{stat.value}</div>
-						<p class="text-muted-foreground">{stat.name}</p>
-					</li>
-				{/each}
-			</ul> -->
 		</div>
-	</div>
+	</section>
+
+	<section class="border-b border-border bg-village-paper">
+		<div class="brand-container">
+			<PillarGrid items={valuePillars} />
+		</div>
+	</section>
+
+	<BrandSection class="bg-background">
+		<PhotoFeature
+			eyebrow="Welcome to The Village Collaborative"
+			title="Rooted in Christ. Built on Community."
+			description="The Village Collaborative exists to partner with families in raising the next generation - spiritually grounded, academically prepared, and equipped to impact the world for God's glory."
+			image={CommunityImage}
+			alt="Children sitting on a bench beneath a tree"
+			href="/about"
+			buttonLabel="About Our Mission"
+		>
+			{#snippet badge()}
+				Partnering With Families
+			{/snippet}
+		</PhotoFeature>
+	</BrandSection>
+
+	<BrandSection class="bg-village-sage/70 py-12 lg:py-16">
+		<div class="text-center">
+			<p class="font-script text-2xl text-village-green">Our Approach</p>
+			<h2 class="font-display mt-2 text-3xl leading-tight text-village-navy lg:text-4xl">
+				Forming Hearts. Inspiring Minds. Equipping for Life.
+			</h2>
+		</div>
+		<PillarGrid items={approachPillars} iconStyle="circle" class="mt-8" />
+	</BrandSection>
+
+	<CtaBand
+		image={CtaImage}
+		title="Come See the Village Difference"
+		label="Schedule a Visit"
+		href="/contact"
+	/>
 
 	<Footer />
 </main>
